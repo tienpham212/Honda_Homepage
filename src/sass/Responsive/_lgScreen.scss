@@ -12,6 +12,7 @@
                 background-color: white;
                 position: absolute;
                 transition: all .5s;
+                top: 28px;
             }
             &::before {
                 content: '';
@@ -19,7 +20,7 @@
                 height: 5px;
                 background-color: white;
                 position: absolute;
-                top: 14px;
+                top: 18px;
                 transition: all .5s;
             }
         }
@@ -32,6 +33,11 @@
                 transform: rotate(-30deg);
                 top: 22px;
             }
+        }
+        .lg-marker {
+            color: $color-white;
+            margin-left: auto;
+            font-size: $font-size-3;
         }
     }
 }

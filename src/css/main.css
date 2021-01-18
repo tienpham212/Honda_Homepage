@@ -1183,6 +1183,7 @@ body {
     background-color: white;
     position: absolute;
     transition: all .5s;
+    top: 28px;
   }
   #header .xs-button::before {
     content: '';
@@ -1190,7 +1191,7 @@ body {
     height: 5px;
     background-color: white;
     position: absolute;
-    top: 14px;
+    top: 18px;
     transition: all .5s;
   }
   #header button.navbar-toggler.rotate .xs-button::after {
@@ -1200,6 +1201,11 @@ body {
   #header button.navbar-toggler.rotate .xs-button::before {
     transform: rotate(-30deg);
     top: 22px;
+  }
+  #header .lg-marker {
+    color: white;
+    margin-left: auto;
+    font-size: 1.6rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
