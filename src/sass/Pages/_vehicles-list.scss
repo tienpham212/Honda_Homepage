@@ -1,0 +1,102 @@
+#vehicles-section {
+    animation-duration: .4s;
+    padding-top: $pd-8 - 10;
+    .vehicles-nav {
+        border-bottom: $border-2;
+        background-color: $color-white;
+        .vehicles-nav-content {
+            text-align: center;
+            margin-bottom: 0;
+            >.vehicle-nav-items {
+                display: inline-block;
+                position: relative;
+                padding: 0 $pd-6;
+                a {
+                    display: inline-block;
+                    padding: $pd-5 - 3 0;
+                    @include text($font-size-1, $font-weight-bold, $color-dark-blue-2);
+                    border-bottom: 3px solid transparent;
+                    &:focus {
+                        border-bottom: 3px solid $color-blue-1;
+                        color: $color-blue-1;
+                        outline: $color-blue-2;
+                    }
+                    &:hover {
+                        text-decoration: none;
+                        color: $color-blue-1;
+                    }
+                }
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: 12px;
+                    background-color: $color-gray;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            >.vehicle-nav-items:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    #vehicles-list {
+        max-height: 1000px;
+        .vehicless-segmentation {
+            display: flex;
+            flex-wrap: wrap;
+            h2 {
+                padding: $pd-4 $pd-7 $pd-2;
+                @include text($font-size-1, $font-weight-500, $color-dark-blue-2);
+                width: 100%;
+            }
+            .vehicles-items {
+                width: 18%;
+                background-color: $color-white;
+                margin: $mg-4 0 $mg-4 $mg-5;
+                .vehicles-img {
+                    img:last-child {
+                        display: none;
+                    }
+                }
+                &:hover {
+                    img:last-child {
+                        display: block;
+                    }
+                    img:first-child {
+                        display: none;
+                    }
+                }
+                .vehicles-description {
+                    margin: 0 $mg-4;
+                    h3 {
+                        @include text($font-size-1, $font-weight-bold, $color-dark-blue-2);
+                        border-bottom: $border-2;
+                    }
+                    .price,
+                    .speed {
+                        @include text( $font-size-1, $font-weight-500, $color-dark-blue-2);
+                        span {
+                            @include text($font-size-1 - .2, $font-weight-normal, $color-dark-blue-2);
+                            margin-left: $mg-1;
+                        }
+                    }
+                }
+                .vehicle-button {
+                    padding: $pd-2 $pd-5;
+                    text-align: center;
+                    .btn-explore {
+                        margin-right: $mg-2;
+                    }
+                    .btn-build {
+                        margin-left: $mg-2;
+                    }
+                }
+            }
+        }
+    }
+}

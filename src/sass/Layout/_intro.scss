@@ -1,0 +1,39 @@
+#intro {
+    margin-top: -170px;
+    z-index: 10;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    padding: 0 3%;
+    .intro-item-1 {
+        position: relative;
+        background-image: url(../img/our-vehicle-intro-1.jpg);
+        height: 370px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        .intro-item-content {
+            position: absolute;
+            bottom: 15%;
+            left: 25%;
+            p {
+                @include text($font-size-3, $font-weight-bold, $color-white)
+            }
+        }
+    }
+    .intro-item-2 {
+        background-image: url(../img/our-vehicles-intro-2.jpg);
+        height: 370px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        .intro-item-content {
+            position: absolute;
+            bottom: 40%;
+            left: 5%;
+            p {
+                @include text($font-size-3, $font-weight-bold, $color-white)
+            }
+        }
+    }
+}

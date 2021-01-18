@@ -1,0 +1,21 @@
+#owner-content {
+    width: 620%;
+    @include text($font-size-1, $font-weight-bold, $color-blue-1);
+    background-color: $color-white;
+    padding: $pd-7 - 4;
+    position: absolute;
+    top: $pd-7 + 9;
+    right: -437%;
+    animation-duration: .5s;
+    z-index: 2;
+    .owner-left,
+    .owner-right {
+        padding: 0 $pd-6;
+    }
+    .owner-left {
+        border-right: 2px solid $color-gray;
+    }
+    .owner-items {
+        margin-bottom: $mg-4 - 3;
+    }
+}

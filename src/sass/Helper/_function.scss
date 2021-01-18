@@ -1,0 +1,48 @@
+// @each $id in (1, 2, 3, 4, 5) {
+//     .tool-items-#{$id} {}
+// }
+@each $id in (1, 2, 3, 4) {
+    .slide-header-#{$id} {
+        background-image: url(../img/banner-#{$id}.jpg);
+        background-position: center 0;
+        background-size: cover;
+        height: 60%;
+    }
+}
+
+@each $id in (1, 2, 3, 4, 5) {
+    .our-vehicles-items-#{$id} {
+        background-image: url(../img/slider-#{$id}.jpg);
+        background-position: center 0;
+        background-size: cover;
+        height: 100%;
+    }
+}
+
+@each $id in (1, 2, 3, 4) {
+    .services-item-#{$id} {
+        background-image: url(../img/item-#{$id}.jpg);
+        background-position: center 0;
+        background-size: 140%;
+        height: 300px;
+        position: relative;
+        box-shadow: $box-shadow-1;
+        transition: all .5s;
+        &:hover {
+            transform: translateY(-15px);
+        }
+    }
+}
+
+@each $id in (1, 2, 3, 4, 5) {
+    .discover-items-#{$id} {
+        background-image: url(../img/discover-#{$id}.jpg);
+        height: 450px;
+        background-position: center -40px;
+        position: relative;
+        box-shadow: $box-shadow-1;
+        margin-bottom: $mg-5;
+        background-color: $color-white;
+        background-repeat: no-repeat;
+    }
+}

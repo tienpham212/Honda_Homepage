@@ -1,0 +1,62 @@
+#header {
+    padding: 0 $pd-6;
+    background-color: $color-blue-1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    .navbar-brand {
+        padding: 0;
+    }
+    .honda-navbar {
+        padding: 0;
+        .navbar-content {
+            .navbar-nav {
+                margin-left: auto;
+                align-items: center;
+                .nav-item {
+                    position: relative;
+                    .nav-link {
+                        background-size: 100% 200%;
+                        background-image: linear-gradient(to bottom, $color-blue-1 50%, white 50%);
+                        transition: all .5s;
+                        color: $color-white;
+                        padding: $pd-3 $pd-4;
+                        font-weight: $font-weight-bold;
+                        font-size: $font-size-1;
+                        &:hover {
+                            background-position: 0 -100%;
+                            color: $color-blue-1;
+                        }
+                        i {
+                            font-size: $font-size-2;
+                            transform: translateY(3px);
+                            margin-left: $mg-1;
+                        }
+                        .location {
+                            font-size: 1rem;
+                            transform: none;
+                        }
+                    }
+                    .active {
+                        color: $color-blue-1;
+                        background-image: linear-gradient(to bottom, $color-white 50%, white 50%);
+                        i {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    #shopping {
+                        padding: $pd-3 $pd-6;
+                        border-right: $border-1;
+                    }
+                    #vehicle {
+                        padding: $pd-3 $pd-6;
+                        border-left: $border-1;
+                        border-right: $border-1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.btn-explore,
+.btn-build {
+    @include button($color-white, $color-blue-2, $color-blue-1, $pd-1 - 3 $pd-6 - 5, $color-blue-2, $color-blue-2, $color-white);
+    border-radius: 40px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-orange {
+    @include button($color-orange, $color-white, $color-white, $pd-1 $pd-5, $color-white, $color-white, $color-orange);
+    border-radius: 40px;
+    font-weight: $font-weight-bold;
+    cursor: pointer;
+}
+
+.btn-white {
+    @include button(transparent, $color-white, $color-white, $pd-1 $pd-2, $color-white, $color-blue-1, $color-blue-1);
+    font-size: $font-size-1;
+    font-weight: $font-weight-bold;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.btn-orange-white {
+    @include button($color-white, $color-orange, $color-orange, $pd-1 $pd-6, $color-orange, $color-orange, $color-white);
+    font-size: $font-size-1;
+    font-weight: $font-weight-bold;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.btn-go {
+    @include button($color-blue-2, $color-blue-2, $color-white, $pd-1 $pd-7, $color-white, $color-blue-2, $color-blue-2);
+    font-size: $font-size-1;
+    font-weight: $font-weight-bold;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.play-button {
+    color: $color-dark-blue-1;
+    font-size: $font-size-3 + .4;
+    width: 60px;
+    height: 60px;
+    background-color: $color-white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 58px;
+    i {
+        transform: translateX(3px);
+    }
+    &:hover {
+        background-color: $color-blue-4;
+        i {
+            color: $color-white;
+        }
+    }
+}

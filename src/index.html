@@ -1,0 +1,1385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- BS4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Honda Webpage</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!--Scroll Css-->
+    <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
+    <!--animate css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--Swiper carousel css-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <!--main css-->
+    <link rel="stylesheet" href="./css/main.css">
+
+
+</head>
+
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg honda-navbar ">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="">
+              <!-- <span class="navbar-toggler-icon"></span> -->
+                <div class="xs-button"> 
+
+                </div>
+                
+            </button>
+            <div class="collapse navbar-collapse navbar-content" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" id="vehicle" href="#">
+                            VEHICLE <i class="fa fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" id="shopping" href="#" data-toggle="dropdown">
+                            SHOPPING TOOLS <i class="fa fa-angle-down"></i>
+                        </a>
+                        <section id="shopping-tools" class="d-none animate__animated ">
+                            <div class="tools-top d-flex">
+                                <div class="tool-items">
+                                    <i class="fa fa-tools"></i>
+                                    <p>Build & Price</p>
+                                </div>
+                                <div class="tool-items">
+                                    <i class="fa fa-tag"></i>
+                                    <p>See Offers</p>
+                                </div>
+                                <div class="tool-items">
+                                    <i class="fa fa-search"></i>
+                                    <p>Search Inventory</p>
+                                </div>
+                                <div class="tool-items">
+                                    <i class="fa fa-calculator"></i>
+                                    <p>Estimate Payment</p>
+                                </div>
+                                <div class="tool-items">
+                                    <i class="fa fa-shopping-bag"></i>
+                                    <p>Buy Online</p>
+                                </div>
+                            </div>
+                            <div class="tools-bottom d-flex">
+                                <div class="tools-options">
+                                    <span>Trad-In Value</span><i class="fa fa-external-link-alt"></i>
+                                </div>
+                                <div class="tools-options">
+                                    <span>Honda FInancial Services</span><i class="fa fa-external-link-alt"></i>
+                                </div>
+                                <div class="tools-options">
+                                    <span>Buyer's Guide</span><i class="fa fa-external-link-alt"></i>
+                                </div>
+                                <div class="tools-options">
+                                    <span>Apply For Financing</span><i class="fa fa-external-link-alt"></i>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="owner" href="#">
+                            Owner <i class="fa fa-angle-down"></i>
+                        </a>
+                        <section id="owner-content" class="d-none animate__animated ">
+                            <div class="row">
+                                <div class="col-6 owner-left">
+                                    <div>
+                                        <a class="owner-items d-flex justify-content-between">
+                                            <span>Owner Site</span><i class="fa fa-external-link-alt"></i>
+                                        </a>
+                                        <a class="owner-items d-flex justify-content-between">
+                                            <span>Owner's Manual & Warranties</span><i class="fa fa-external-link-alt"></i>
+                                        </a>
+                                        <a class="owner-items d-flex justify-content-between">
+                                            <span>Schedule Service</span><i class="fa fa-external-link-alt"></i>
+                                        </a>
+                                        <a class="owner-items d-flex justify-content-between">
+                                            <span>Shop Parts & Accessories</span><i class="fa fa-external-link-alt"></i>
+                                        </a>
+                                        <a class="owner-items d-flex justify-content-between">
+                                            <span>Certified Body Shop Locator</span><i class="fa fa-external-link-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 owner-right">
+                                    <div>
+                                        <a class="owner-items d-flex justify-content-between">
+                                            <span>Roadside Assistance</span><i class="fa fa-external-link-alt"></i>
+                                        </a>
+                                        <a class="owner-items d-flex justify-content-between">
+                                            <span>Pay My Bill</span><i class="fa fa-external-link-alt"></i>
+                                        </a>
+                                        <a class="owner-items d-flex justify-content-between">
+                                            <span>Recalls</span><i class="fa fa-external-link-alt"></i>
+                                        </a>
+                                        <a class="owner-items d-flex justify-content-between">
+                                            <span>Customer Services</span><i class="fa fa-external-link-alt"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="explore" href="#">
+                            Explore <i class="fa fa-angle-down"></i>
+                        </a>
+                        <section id="explore-content" class="d-none animate__animated ">
+                            <ul>
+                                <li>Honda Safety</li>
+                                <li>Honda Sensing</li>
+                                <li>Rugged Capability</li>
+                                <li>Electrified Vehicles</li>
+                                <li>News & Events</li>
+                                <li>Honda Racing</span><i class="fa fa-external-link-alt"></i></li>
+                                <li>Honda in the Community</span><i class="fa fa-external-link-alt"></i></li>
+                                <li>Honda on Inclusion and Diversity</span><i class="fa fa-external-link-alt"></i></li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                           Find a Dealer
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                           Espanol
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Location <i class="fa fa-map-marker-alt location"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="vehicles-section" class="d-none animate__animated ">
+        <div class="vehicles-nav">
+            <div class="vehicles-nav-content w-50 mx-auto d-flex justify-content-around">
+                <div class="vehicle-nav-items">
+                    <a href="#" id="suv-nav">SUV & CROSSOVERS</a>
+                </div>
+                <div class="vehicle-nav-items">
+                    <a href="#" id="cars-nav">CARS</a>
+                </div>
+                <div class="vehicle-nav-items">
+                    <a href="#" id="minivan-nav">MINIVAN & TRUCK</a>
+                </div>
+                <div class="vehicle-nav-items">
+                    <a href="#" id="electrified-nav">ELECTRIFIED</a>
+                </div>
+                <div class="vehicle-nav-items">
+                    <a href="#" id="future-nav">FUTURE</a>
+                </div>
+                <div class="vehicle-nav-items">
+                    <a href="#" id="preowned-nav">PREOWNED</a>
+                </div>
+            </div>
+        </div>
+        <div id="vehicles-list">
+            <div class="vehicless-segmentation" id="suv">
+                <h2>SUVS & CROSSOVER</h2>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-1.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-1-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-2.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-2-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-3.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-3-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-4.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-4-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-1.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-1-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-2.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-2-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-3.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-3-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+            </div>
+            <div class="vehicless-segmentation" id="cars">
+                <h2>CARS</h2>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-1.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-1-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-2.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-2-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-3.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-3-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-4.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-4-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-1.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-1-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="vehicless-segmentation" id="minivan">
+                <h2>MINIVAN & TRUCK</h2>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-1.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-1-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-2.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-2-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-3.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-3-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-4.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-4-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="vehicless-segmentation" id="electrified">
+                <h2>ELECTRIFIED</h2>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-1.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-1-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-2.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-2-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-3.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-3-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-4.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-4-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-1.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-1-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="vehicless-segmentation" id="future">
+                <h2>FUTURE</h2>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-1.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-1-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-2.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-2-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-3.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-3-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-4.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-4-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-1.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-1-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="vehicless-segmentation" id="preowned">
+                <h2>PREOWNED</h2>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-1.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-1-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-2.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-2-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-3.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-3-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-4.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-4-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+                <div class="vehicles-items">
+                    <div class="vehicles-img">
+                        <img src="./img/xe-1.png" alt="xe1" class="img-fluid">
+                        <img src="./img/xe-1-hover.png" alt="xe1-hover" class="img-fluid">
+
+                    </div>
+                    <div class="vehicles-description">
+                        <h3>HR-V</h3>
+                        <div class="price">
+                            $21,020 <span>STARTING MSRP*</span>
+                        </div>
+                        <div class="speed">
+                            28/34 <span>CITY/HWY MPG TRG*</span>
+                        </div>
+                    </div>
+                    <div class="vehicle-button">
+                        <button class="btn-explore">EXPLORE</button>
+                        <button class="btn-build">BUILD</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="carousel-header">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide slide-header-1">
+                    <button class="btn-orange">EXPLORE</button>
+                </div>
+                <div class="swiper-slide slide-header-2">
+                    <button class="btn-orange">SEE ALL OFFERS</button>
+                </div>
+                <div class="swiper-slide slide-header-3">
+                    <button class="btn-orange">SEE OFFER</button>
+                </div>
+                <div class="swiper-slide slide-header-4">
+                    <button class="btn-orange">LEARN MORE</button>
+                </div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+
+        </div>
+    </section>
+    <section id="intro">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="intro-item-1">
+                        <div class="intro-item-content">
+                            <p>See the Next-Generation Civic Propotype</p>
+                            <button class="btn-white">LEARN MORE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="intro-item-2">
+                        <div class="intro-item-content">
+                            <p>Sporty.VErsatile.Ready for anything.</p>
+                            <button class="btn-white">LEARN MORE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="our-vehicles">
+        <h1>Our Vehicles</h1>
+        <div id="our-vehicles-carousel" class="carousel slide" data-ride='slide'>
+            <div class="carousel-indicators-config">
+                <ol class="carousel-indicators ">
+                    <li data-target="#our-vehicles-carousel" data-slide-to="0" class="active">
+                        CARS
+                    </li>
+                    <li data-target="#our-vehicles-carousel" data-slide-to="1">SUVS & CROSSOVERS</li>
+                    <li data-target="#our-vehicles-carousel" data-slide-to="2">MINIVAN & TRUCK</li>
+                    <li data-target="#our-vehicles-carousel" data-slide-to="3">ELECTRIFIED</li>
+                    <li data-target="#our-vehicles-carousel" data-slide-to="4">FUTURE</li>
+                </ol>
+            </div>
+            <div class="carousel-inner our-vehicles-inner">
+                <div class="carousel-item our-vehicles-items-1 active">
+                    <div class="item-content">
+                        <div class="item-content-top">
+                            <p>Cars 1 <span>/12</span></p>
+                            <div class="vehicle-logo">
+                                <img src="./img/civic-logo.jpg" alt="civic logo" class="img-fluid">
+                            </div>
+                            <div class="vehicle-description">
+                                <p>With three advanced powertrains , a cabin full of technological innovations and Honda Sensing standard on all trims , the Accord is everything a sedan should be and more</p>
+                            </div>
+                            <div class="vehicle-value">
+                                <div class="price">
+                                    <p>$24,970</p>
+                                    <span>Starting MSRP</span>
+                                </div>
+                                <div class="rating">
+                                    <p>30/38</p>
+                                    <span>CITY/HWY MPG RATING</span>
+                                </div>
+                            </div>
+                            <div class="vehicle-button d-flex ">
+                                <div class="btn-orange">EXPLORE</div>
+                                <div class="btn-orange-white ">BUILD</div>
+                            </div>
+
+                        </div>
+                        <div class="item-content-bottom">
+                            <span>EXPLORE THE CIVIC FAMILY <i class="fa fa-angle-right"></i></span>
+                            <img src="./img/accord-family-vehicles-2x.png" alt="accordfam" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item our-vehicles-items-2">
+                    <div class="item-content">
+                        <div class="item-content-top">
+                            <p>Cars 1 <span>/12</span></p>
+                            <div class="vehicle-logo">
+                                <img src="./img/civic-logo.jpg" alt="civic logo" class="img-fluid">
+                            </div>
+                            <div class="vehicle-description">
+                                <p>With three advanced powertrains , a cabin full of technological innovations and Honda Sensing standard on all trims , the Accord is everything a sedan should be and more</p>
+                            </div>
+                            <div class="vehicle-value">
+                                <div class="price">
+                                    <p>$24,970</p>
+                                    <span>Starting MSRP</span>
+                                </div>
+                                <div class="rating">
+                                    <p>30/38</p>
+                                    <span>CITY/HWY MPG RATING</span>
+                                </div>
+                            </div>
+                            <div class="vehicle-button d-flex ">
+                                <div class="btn-orange">EXPLORE</div>
+                                <div class="btn-orange-white ">BUILD</div>
+                            </div>
+
+                        </div>
+                        <div class="item-content-bottom">
+                            <span>EXPLORE THE CIVIC FAMILY <i class="fa fa-angle-right"></i></span>
+                            <img src="./img/accord-family-vehicles-2x.png" alt="accordfam" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item our-vehicles-items-3">
+                    <div class="item-content">
+                        <div class="item-content-top">
+                            <p>Cars 1 <span>/12</span></p>
+                            <div class="vehicle-logo">
+                                <img src="./img/civic-logo.jpg" alt="civic logo" class="img-fluid">
+                            </div>
+                            <div class="vehicle-description">
+                                <p>With three advanced powertrains , a cabin full of technological innovations and Honda Sensing standard on all trims , the Accord is everything a sedan should be and more</p>
+                            </div>
+                            <div class="vehicle-value">
+                                <div class="price">
+                                    <p>$24,970</p>
+                                    <span>Starting MSRP</span>
+                                </div>
+                                <div class="rating">
+                                    <p>30/38</p>
+                                    <span>CITY/HWY MPG RATING</span>
+                                </div>
+                            </div>
+                            <div class="vehicle-button d-flex ">
+                                <div class="btn-orange">EXPLORE</div>
+                                <div class="btn-orange-white ">BUILD</div>
+                            </div>
+
+                        </div>
+                        <div class="item-content-bottom">
+                            <span>EXPLORE THE CIVIC FAMILY <i class="fa fa-angle-right"></i></span>
+                            <img src="./img/accord-family-vehicles-2x.png" alt="accordfam" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item our-vehicles-items-4">
+                    <div class="item-content">
+                        <div class="item-content-top">
+                            <p>Cars 1 <span>/12</span></p>
+                            <div class="vehicle-logo">
+                                <img src="./img/civic-logo.jpg" alt="civic logo" class="img-fluid">
+                            </div>
+                            <div class="vehicle-description">
+                                <p>With three advanced powertrains , a cabin full of technological innovations and Honda Sensing standard on all trims , the Accord is everything a sedan should be and more</p>
+                            </div>
+                            <div class="vehicle-value">
+                                <div class="price">
+                                    <p>$24,970</p>
+                                    <span>Starting MSRP</span>
+                                </div>
+                                <div class="rating">
+                                    <p>30/38</p>
+                                    <span>CITY/HWY MPG RATING</span>
+                                </div>
+                            </div>
+                            <div class="vehicle-button d-flex ">
+                                <div class="btn-orange">EXPLORE</div>
+                                <div class="btn-orange-white ">BUILD</div>
+                            </div>
+
+                        </div>
+                        <div class="item-content-bottom">
+                            <span>EXPLORE THE CIVIC FAMILY <i class="fa fa-angle-right"></i></span>
+                            <img src="./img/accord-family-vehicles-2x.png" alt="accordfam" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item our-vehicles-items-5">
+                    <div class="item-content">
+                        <div class="item-content-top">
+                            <p>Cars 1 <span>/12</span></p>
+                            <div class="vehicle-logo">
+                                <img src="./img/civic-logo.jpg" alt="civic logo" class="img-fluid">
+                            </div>
+                            <div class="vehicle-description">
+                                <p>With three advanced powertrains , a cabin full of technological innovations and Honda Sensing standard on all trims , the Accord is everything a sedan should be and more</p>
+                            </div>
+                            <div class="vehicle-value">
+                                <div class="price">
+                                    <p>$24,970</p>
+                                    <span>Starting MSRP</span>
+                                </div>
+                                <div class="rating">
+                                    <p>30/38</p>
+                                    <span>CITY/HWY MPG RATING</span>
+                                </div>
+                            </div>
+                            <div class="vehicle-button d-flex ">
+                                <div class="btn-orange">EXPLORE</div>
+                                <div class="btn-orange-white ">BUILD</div>
+                            </div>
+
+                        </div>
+                        <div class="item-content-bottom">
+                            <span>EXPLORE THE CIVIC FAMILY <i class="fa fa-angle-right"></i></span>
+                            <img src="./img/accord-family-vehicles-2x.png" alt="accordfam" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#our-vehicles-carousel" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#our-vehicles-carousel" role="button" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+    </section>
+    <section id="services">
+        <div class="row">
+            <div class="col-3">
+                <div class="services-item-1 ">
+                    <div class="service-item">
+                        <p class="service-content">Build and Price</p>
+                        <button class="btn-go">GO</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="services-item-2 ">
+                    <div class="service-item">
+                        <p class="service-content">See Offers</p>
+                        <button class="btn-go">GO</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="services-item-3">
+                    <div class="service-item">
+                        <p class="service-content">Search Inventory</p>
+                        <button class="btn-go">GO</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="services-item-4 ">
+                    <div class="service-item">
+                        <p class="service-content">Estimate Payments</p>
+                        <button class="btn-go">GO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="guide">
+        <div class="row">
+            <div class="col-6">
+                <div class="guide-left">
+                    <div class="guide-left-content">
+                        <h3>Future Vehicles</h3>
+                        <p class="guide-left-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dolor mollitia earum modi ducimus beatae quis alias cum! Eius, animi.
+                        </p>
+                        <button class="btn-go">SHOP CERTIFICATED</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="guide-right">
+                    <div class="guide-right-content">
+                        <h3>How-To Videos and Guides</h3>
+                        <p class="guide-right-text">
+                            Find owner manuals , instructional guides , how-to videos and helpful links designed tp help you make the most of your Honda
+                        </p>
+                        <button class="btn-go">GO</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="discover">
+        <div class="discover-text text-center">
+            <h1>Discover Honda</h1>
+            <p>Explore the world of Honda through our latest news , events and videos</p>
+        </div>
+        <div class="discover-content">
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <div class="discover-items-1">
+                        <div class="discover-item-inner">
+                            <h3>Fighting COVID-19 Together</h3>
+                            <p>Discover how Honda has helped in the fight against COVID-19. From supporting our customers to donating personal protective equipment to our healthcare heroes, we’re dedicated to doing everything we can for our communities.</p>
+
+                        </div>
+                        <button class="btn-go">LEARN MORE</button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="discover-items-2">
+                        <div class="discover-item-inner">
+                            <h3>Shop Simple Now Available</h3>
+                            <p>You can buy your next Honda online. Available in select markets.</p>
+
+                        </div>
+                        <button class="btn-go">LEARN MORE</button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="discover-items-3">
+                        <a href="#" class="play-button"><i class="fa fa-play"></i></a>
+                        <div class="discover-item-inner">
+                            <h3>Get to Know the Redesigned 2021 Accord Hybrid</h3>
+                            <p>With its thrilling driving performance and torque, outstanding fuel-economy ratings* and all the comfort and cargo space you’ve come to expect from the Accord, the 2021 Accord Hybrid checks all your boxes and more.</p>
+
+                        </div>
+                        <button class="btn-go">WATCH VIDEO</button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="discover-items-4">
+                        <div class="discover-item-inner">
+                            <h3>Honda Awarded Best Value Brand by KBB.com for Sixth Consecutive Year</h3>
+                            <p>This marks the sixth consecutive year that Honda has been honored with the Best Value Brand award by Kelley Blue Book’s KBB.com.⁠* In their announcement, the KBB.com editors noted how consistent “quality, reliability, and resale
+                                value” across the entire Honda vehicle lineup contributed to the win.</p>
+
+                        </div>
+                        <button class="btn-go">LEARN MORE</button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="discover-items-5">
+                        <div class="discover-item-inner">
+                            <h3>Honda Sensing®</h3>
+                            <p>Learn more about our suite of safety and driver-assistive technologies designed to alert you to things you might miss while driving.</p>
+
+                        </div>
+                        <button class="btn-go">LEARN MORE</button>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button class="btn-orange">MORE NEWS AND EVENTS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="space"></div>
+        <div class="footer-logo">
+            <img src="./img/16132.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="footer-contact">
+            <div class="footer-social">
+                <p>Stay In Touch</p>
+                <div class="social">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-snapchat-ghost"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+            <div class="footer-search-field">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Search for anything Honda">
+            </div>
+            <div class="footer-informed">
+                <p>Receive the latest news and exclusive updates</p>
+                <button class="btn-explore">STAY INFORMED</button>
+            </div>
+        </div>
+        <div class="footer-top">
+            <div class="footer-top-items">
+                <h3>Vehicles</h3>
+                <ul class="list-unstyled">
+                    <li><a href="">Civic Models</a></li>
+                    <li><a href="">Insight Hybrid</a></li>
+                    <li><a href="">Accord Models</a></li>
+                    <li><a href="">Clarity Models</a></li>
+                    <li><a href="">Fit Hatchback</a></li>
+                    <li><a href="">HR-V Crossover</a></li>
+                    <li><a href="">CR-V Crossover</a></li>
+                    <li><a href="">Pilot SUV</a></li>
+                    <li><a href="">Odyssey Minivan</a></li>
+                    <li><a href="">Ridgeline Truck</a></li>
+                    <li><a href="">Future vehicles</a></li>
+                    <li><a href="">Rugged Câpbility</a></li>
+                    <li><a href="">Electrified Vehicles</a></li>
+                    <li><a href="">Honda Certified Pre-Owned</a></li>
+                    <li><a href="">All Vehicles</a></li>
+                </ul>
+            </div>
+            <div class="footer-top-items">
+                <h3>Shopping Tools</h3>
+                <ul class="list-unstyled">
+                    <li><a href="">Build & Price</a></li>
+                    <li><a href="">See Offers</a></li>
+                    <li><a href="">Search Inventory</a></li>
+                    <li><a href="">Estimate Paymetn</a></li>
+                    <li><a href="">Apply for Financing</a></li>
+                    <li><a href="">Trade-In Value</a></li>
+                    <li><a href="">Honda Financial Services</a></li>
+                    <li><a href="">Lease or Finance</a></li>
+                </ul>
+            </div>
+            <div class="footer-top-items">
+                <h3>Discover Honda</h3>
+                <ul class="list-unstyled">
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">News & Events</a></li>
+                    <li><a href="">Awards,Accolades & Rating</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Investor Relations</a></li>
+                    <li><a href="">Corporate Social Responsibility</a></li>
+                    <li><a href="">Honda in America</a></li>
+                    <li><a href="">Honda Worldwide</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-top-items">
+                <h3>Help & Support</h3>
+                <ul class="list-unstyled">
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Customer Service</a></li>
+                    <li><a href="">Mobility Assistance Program</a></li>
+                    <li><a href="">Rear Entertainment System</a></li>
+                    <li><a href="">Accessibility for Individuals with Disabilities</a></li>
+                    <li><a href="">Buyer's Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-top-items">
+                <h3>Owners</h3>
+                <ul class="list-unstyled">
+                    <li><a href="">Honda Owners Site</a></li>
+                    <li><a href="">Schedule Service</a></li>
+                    <li><a href="">Parts & Service</a></li>
+                    <li><a href="">Certified Body Shop Locator</a></li>
+                    <li><a href="">eStore</a></li>
+                    <li><a href="">Roeadside Assistance</a></li>
+                    <li><a href="">Pay My Bill</a></li>
+                    <li><a href="">Radia & Navi Codes</a></li>
+                    <li><a href="">HondaLink</a></li>
+                    <li><a href="">Wi-Fi Hotspot Data Plans</a></li>
+                    <li><a href="">Safety Recall</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <div class="row ">
+
+                <div class="col-6">
+                    <div class="bottom-text-left">
+                        <a href="#" target="_blank">©2021 American Honda Motor Co.</a>, Inc. All information contained herein applies to U.S. vehicles only. For non-U.S.-distributor information go to <a href="#" target="_blank">world.honda.com</a>.
+                    </div>
+                </div>
+                <div class="col-6 text-right">
+                    <div class="bottom-text-right">
+                        <p>Privacy Policy <span>|</span> Prop 65 Info <span>|</span> Vehicle Data Privacy <span>|</span> SMS Terms</p>
+                        <p>Term & Conditions <span>|</span> Do Not Sell My Personal Information <span>|</span> Site Map</p>
+                    </div>
+
+                </div>
+                <div class="col-12">
+                    <div class="bottom-partner">
+                        <img src="./img/footer-logo-1.jpg">
+                        <img src="./img/footer-logo-2.jpg">
+                        <img src="./img/footer-logo-3.jpg">
+                        <img src="./img/footer-logo-4.jpg">
+                        <img src="./img/footer-logo-5.jpg">
+                        <img src="./img/footer-logo-6.jpg">
+                        <img src="./img/footer-logo-7.png">
+                        <img src="./img/footer-logo-8.jpg">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="bottom-cookie">
+                        We use cookies to improve your experience on this site and show you personalized advertising. To find out more, read our <a href="#">Cookie Policy </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="" class="back-to-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+
+
+
+
+
+
+    <!-- JS FILES-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--Scroll JS-->
+    <script src="./js/jquery.mCustomScrollbar.js"></script>
+    <!--Swiper js-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            loop: true,
+
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })
+    </script>
+    <!--mainjs--->
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

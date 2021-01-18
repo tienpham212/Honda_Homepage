@@ -1,0 +1,118 @@
+#our-vehicles {
+    padding: $pd-6 + 5 0;
+    color: $color-white;
+    h1 {
+        @include text($font-size-4 - .5, $font-weight-300, $color-dark-blue-1);
+        text-align: center;
+        padding-bottom: $pd-8;
+    }
+    .our-vehicles-inner {
+        height: 560px;
+        .item-content {
+            width: 100%;
+            .item-content-top {
+                width: 25%;
+                padding: $pd-7 0 $pd-8 $pd-9;
+                p {
+                    font-weight: $font-weight-bold;
+                    font-size: $font-size-1;
+                    margin-bottom: $mg-5;
+                    span {
+                        font-weight: $font-weight-normal;
+                    }
+                }
+                img {
+                    transform: translateX(-10px);
+                }
+                .vehicle-description {
+                    padding-top: $pd-4;
+                    p {
+                        font-weight: $font-weight-normal;
+                    }
+                }
+                .vehicle-value {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: $mg-4;
+                    .price,
+                    .rating {
+                        p {
+                            font-size: $font-size-5 - 1;
+                            font-weight: $font-weight-300;
+                            margin-bottom: 0;
+                        }
+                        span {
+                            font-weight: $font-weight-bold;
+                        }
+                    }
+                }
+                .vehicle-button {
+                    font-size: $font-size-1;
+                    .btn-orange {
+                        margin-right: $mg-2;
+                    }
+                }
+            }
+            .item-content-bottom {
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
+                align-items: center;
+                border-top: $border-2;
+                padding-left: $pd-9;
+                span {
+                    font-weight: $font-weight-bold;
+                    margin-right: auto;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 90px;
+        background-color: #ffffffe6;
+        border-radius: 5px;
+        top: 40%;
+        font-size: $font-size-4;
+        color: $color-blue-1;
+    }
+    .carousel-control-prev {
+        transform: translateX(-5px);
+    }
+    .carousel-control-next {
+        transform: translateX(5px);
+    }
+    .carousel-indicators li {
+        width: auto;
+        height: 30px;
+        text-indent: unset;
+    }
+    .carousel-indicators-config {
+        background-color: $color-white-background;
+        height: 20px;
+        .carousel-indicators {
+            padding: 0 $pd-5;
+            top: -20px;
+            bottom: unset;
+            display: flex;
+            width: 50%;
+            color: $color-dark-blue-1;
+            margin: 0%;
+            justify-content: space-around;
+            font-size: $font-size-1;
+            font-weight: $font-weight-bold;
+            li {
+                background-color: transparent;
+                &.active {
+                    color: $color-blue-1;
+                    border-bottom: 5px solid $color-blue-1;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

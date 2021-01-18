@@ -1,0 +1,37 @@
+#header {
+    button.navbar-toggler {
+        outline: none;
+    }
+    @media screen and (max-width: 1000px) {
+        .xs-button {
+            color: white;
+            &::after {
+                content: '';
+                width: 20px;
+                height: 5px;
+                background-color: white;
+                position: absolute;
+                transition: all .5s;
+            }
+            &::before {
+                content: '';
+                width: 20px;
+                height: 5px;
+                background-color: white;
+                position: absolute;
+                top: 14px;
+                transition: all .5s;
+            }
+        }
+        button.navbar-toggler.rotate {
+            .xs-button::after {
+                transform: rotate(30deg);
+                top: 22px;
+            }
+            .xs-button::before {
+                transform: rotate(-30deg);
+                top: 22px;
+            }
+        }
+    }
+}
