@@ -1217,7 +1217,6 @@ body {
 @media screen and (max-width: 1000px) {
   #header-menu-lg {
     height: 100vh;
-    padding-right: 15px;
     position: fixed;
     top: 48px;
     left: 0;
@@ -1226,9 +1225,12 @@ body {
     animation-duration: .5s;
     z-index: 20;
   }
+  #header-menu-lg ul {
+    animation-duration: .5s;
+  }
   #header-menu-lg ul li {
     display: flex;
-    margin-left: 20px;
+    margin: 0 20px;
     font-size: 1.2rem;
     font-weight: 500;
     color: #00446B;
@@ -1251,7 +1253,7 @@ body {
   #header-menu-lg ul li .language button {
     margin-left: 5px;
   }
-  #header-menu-lg ul li:nth-child(6) {
+  #header-menu-lg ul .last-li {
     border-color: transparent;
   }
   #header-menu-lg .footer-search-field {
@@ -1261,6 +1263,24 @@ body {
   }
   #header-menu-lg .footer-search-field input {
     padding: 5px 0;
+  }
+  #header-menu-lg .vehicles-nav-lg {
+    animation-duration: .5s;
+  }
+  #header-menu-lg .header-nav {
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2b99d9;
+    padding: 10px 20px;
+  }
+  #header-menu-lg .header-nav span {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+  }
+  #header-menu-lg .back {
+    font-size: 1.8rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

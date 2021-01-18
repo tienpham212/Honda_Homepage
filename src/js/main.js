@@ -138,7 +138,7 @@ $(window).scroll(function(event) {
         $('.back-to-top').css('transform', 'translateX(0px)')
     }
     lastScrollTop = st;
-    console.log(st);
+
 });
 
 
@@ -158,19 +158,119 @@ $('.navbar-toggler').click(function() {
     //Stop scroll bar when collapse menu appear
 let tempNav = '';
 $('.collapse-navbar').click(function() {
-    if (tempNav == '') {
-        $('#header-menu-lg').removeClass('d-none');
-        $('#header-menu-lg').addClass('animate__fadeInDown');
-        $('body').addClass('overflow');
-        tempNav = $(this).attr('id');
-    } else {
-        $('#header-menu-lg').addClass('animate__fadeOutUp');
-        $('body').removeClass('overflow');
-        setTimeout(function() {
-            $('#header-menu-lg').addClass('d-none');
-            $('#header-menu-lg').removeClass('animate__fadeOutUp');
-        }, 500);
-        tempNav = '';
+        if (tempNav == '') {
+            $('#header-menu-lg').removeClass('d-none');
+            $('#header-menu-lg').addClass('animate__fadeInDown');
+            $('body').addClass('overflow');
+            tempNav = $(this).attr('id');
+        } else {
+            $('#header-menu-lg').addClass('animate__fadeOutUp');
+            $('body').removeClass('overflow');
+            setTimeout(function() {
+                $('#header-menu-lg').addClass('d-none');
+                $('#header-menu-lg').removeClass('animate__fadeOutUp');
+                $('.main-nav').removeClass('d-none');
+                $('.vehicles-nav-lg').addClass('d-none');
+                $('.shopping-tools-lg').addClass('d-none');
+                $('.owners-lg').addClass('d-none');
+                $('.explore-lg').addClass('d-none');
 
-    }
+            }, 500);
+            tempNav = '';
+
+
+
+        }
+    })
+    //create slide menu for header 
+$('.nav-link-lg').click(function() {
+        $('.main-nav').addClass('animate__fadeOut')
+        setTimeout(function() {
+            $('.main-nav').addClass('d-none');
+            $('.main-nav').removeClass('animate__fadeOut');
+        }, 300)
+        if ($(this).hasClass('nav-link-vehicles')) {
+            setTimeout(function() {
+                $('.vehicles-nav-lg').removeClass('d-none');
+                $('.vehicles-nav-lg').addClass('animate__fadeIn');
+            }, 300)
+            setTimeout(function() {
+                $('.vehicles-nav-lg').removeClass('animate__fadeIn');
+            }, 500)
+        }
+        if ($(this).hasClass('nav-link-shopping')) {
+            setTimeout(function() {
+                $('.shopping-tools-lg').removeClass('d-none');
+                $('.shopping-tools-lg').addClass('animate__fadeIn');
+            }, 300)
+            setTimeout(function() {
+                $('.shopping-tools-lg').removeClass('animate__fadeIn');
+            }, 500)
+        }
+        if ($(this).hasClass('nav-link-owner')) {
+            setTimeout(function() {
+                $('.owners-lg').removeClass('d-none');
+                $('.owners-lg').addClass('animate__fadeIn');
+            }, 300)
+            setTimeout(function() {
+                $('.owners-lg').removeClass('animate__fadeIn');
+            }, 500)
+        }
+        if ($(this).hasClass('nav-link-explore')) {
+            setTimeout(function() {
+                $('.explore-lg').removeClass('d-none');
+                $('.explore-lg').addClass('animate__fadeIn');
+            }, 300)
+            setTimeout(function() {
+                $('.explore-lg').removeClass('animate__fadeIn');
+            }, 500)
+        }
+    })
+    //create back button for menu lg
+$('.back').click(function() {
+    $('.vehicles-nav-lg').addClass('animate__fadeOut');
+    setTimeout(() => {
+        $('.vehicles-nav-lg').addClass('d-none');
+        $('.vehicles-nav-lg').removeClass('animate__fadeOut');
+        $('.main-nav').removeClass('d-none');
+        $('.main-nav').addClass('animate__fadeIn');
+        setTimeout(() => {
+            $('.main-nav').removeClass('animate__fadeIn');
+        }, 200);
+
+    }, 300);
+    $('.shopping-tools-lg').addClass('animate__fadeOut');
+    setTimeout(() => {
+        $('.shopping-tools-lg').addClass('d-none');
+        $('.shopping-tools-lg').removeClass('animate__fadeOut');
+        $('.main-nav').removeClass('d-none');
+        $('.main-nav').addClass('animate__fadeIn');
+        setTimeout(() => {
+            $('.main-nav').removeClass('animate__fadeIn');
+        }, 200);
+
+    }, 300);
+    $('.owners-lg').addClass('animate__fadeOut');
+    setTimeout(() => {
+        $('.owners-lg').addClass('d-none');
+        $('.owners-lg').removeClass('animate__fadeOut');
+        $('.main-nav').removeClass('d-none');
+        $('.main-nav').addClass('animate__fadeIn');
+        setTimeout(() => {
+            $('.main-nav').removeClass('animate__fadeIn');
+        }, 200);
+
+    }, 300);
+    $('.explore-lg').addClass('animate__fadeOut');
+    setTimeout(() => {
+        $('.explore-lg').addClass('d-none');
+        $('.explore-lg').removeClass('animate__fadeOut');
+        $('.main-nav').removeClass('d-none');
+        $('.main-nav').addClass('animate__fadeIn');
+        setTimeout(() => {
+            $('.main-nav').removeClass('animate__fadeIn');
+        }, 200);
+
+    }, 300);
+
 })
