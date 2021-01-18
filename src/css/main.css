@@ -187,6 +187,11 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+}
+
+.overflow {
+  overflow-y: hidden;
 }
 
 #header {
@@ -638,32 +643,6 @@ body {
   background-color: #007CC0;
   color: white;
   margin-right: 10px;
-}
-
-#footer .footer-contact .footer-search-field {
-  width: 30%;
-  border: 1px solid #dedede;
-  padding: 5px 20px;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #007CC0;
-  box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
-}
-
-#footer .footer-contact .footer-search-field input {
-  border: none;
-  width: 80%;
-}
-
-#footer .footer-contact .footer-search-field input::placeholder {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #007CC0;
-}
-
-#footer .footer-contact .footer-search-field input:focus {
-  outline: none;
 }
 
 #footer .footer-top {
@@ -1168,6 +1147,32 @@ body {
   color: white;
 }
 
+.footer-search-field {
+  width: 30%;
+  border: 1px solid #dedede;
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #007CC0;
+  box-shadow: inset 2px 2px 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.footer-search-field input {
+  border: none;
+  width: 80%;
+}
+
+.footer-search-field input::placeholder {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #007CC0;
+}
+
+.footer-search-field input:focus {
+  outline: none;
+}
+
 #header button.navbar-toggler {
   outline: none;
 }
@@ -1206,6 +1211,56 @@ body {
     color: white;
     margin-left: auto;
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #header-menu-lg {
+    height: 100vh;
+    padding-right: 15px;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background-color: #EEEEEE;
+    animation-duration: .5s;
+    z-index: 20;
+  }
+  #header-menu-lg ul li {
+    display: flex;
+    margin-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #00446B;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #dedede;
+    align-items: center;
+    cursor: pointer;
+  }
+  #header-menu-lg ul li i {
+    font-size: 1.6rem;
+  }
+  #header-menu-lg ul li .language {
+    font-size: 1.2rem;
+  }
+  #header-menu-lg ul li .language .btn-go,
+  #header-menu-lg ul li .language .btn-build {
+    padding: 0 10px;
+  }
+  #header-menu-lg ul li .language button {
+    margin-left: 5px;
+  }
+  #header-menu-lg ul li:nth-child(6) {
+    border-color: transparent;
+  }
+  #header-menu-lg .footer-search-field {
+    width: 60%;
+    background-color: white;
+    margin: 30px auto;
+  }
+  #header-menu-lg .footer-search-field input {
+    padding: 5px 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

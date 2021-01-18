@@ -149,9 +149,28 @@ $('.back-to-top').click(function() {
     })
     //create rotate animate for collapse button in lg 
 $('.navbar-toggler').click(function() {
-    if ($('.navbar-toggler').hasClass('rotate')) {
-        $('.navbar-toggler').removeClass('rotate')
+        if ($('.navbar-toggler').hasClass('rotate')) {
+            $('.navbar-toggler').removeClass('rotate')
+        } else {
+            $('.navbar-toggler').addClass('rotate')
+        }
+    })
+    //Stop scroll bar when collapse menu appear
+let tempNav = '';
+$('.collapse-navbar').click(function() {
+    if (tempNav == '') {
+        $('#header-menu-lg').removeClass('d-none');
+        $('#header-menu-lg').addClass('animate__fadeInDown');
+        $('body').addClass('overflow');
+        tempNav = $(this).attr('id');
     } else {
-        $('.navbar-toggler').addClass('rotate')
+        $('#header-menu-lg').addClass('animate__fadeOutUp');
+        $('body').removeClass('overflow');
+        setTimeout(function() {
+            $('#header-menu-lg').addClass('d-none');
+            $('#header-menu-lg').removeClass('animate__fadeOutUp');
+        }, 500);
+        tempNav = '';
+
     }
 })
