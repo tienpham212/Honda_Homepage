@@ -141,6 +141,8 @@ $(window).scroll(function(event) {
     console.log(st);
 });
 
+
+
 $('.back-to-top').click(function() {
         $('body,html').animate({
             scrollTop: 0
