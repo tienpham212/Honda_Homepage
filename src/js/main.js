@@ -49,6 +49,7 @@ $('.nav-link').click(function() {
         if (temp == '' && $(this).attr('id') === 'vehicle') {
             $('#vehicles-section').removeClass('d-none');
             $('#vehicles-section').addClass('animate__fadeInUp');
+            $('body').addClass('overflow')
             temp = $(this).attr('id');
         } else if (temp == '' && $(this).attr('id') === 'shopping') {
             $('#shopping-tools').removeClass('d-none');
@@ -66,6 +67,7 @@ $('.nav-link').click(function() {
             if (temp === $(this).attr('id')) {
                 if ($(this).attr('id') === "vehicle") {
                     $('#vehicles-section').addClass('animate__fadeOutDown');
+                    $('body').removeClass('overflow')
                     setTimeout(function() {
                         $('#vehicles-section').addClass('d-none');
                         $('#vehicles-section').removeClass('animate__fadeOutDown');
@@ -98,6 +100,7 @@ $('.nav-link').click(function() {
             } else {
                 if ($(this).attr('id') === "shopping") {
                     $('#vehicles-section').addClass('d-none');
+                    $('body').removeClass('overflow')
                     $('#shopping-tools').removeClass('d-none');
                     $('#owner-content').addClass('d-none');
                     $('#explore-content').addClass('d-none');
