@@ -105,5 +105,24 @@
         .back {
             font-size: $font-size-2 + .4;
         }
+        #vehicles-section-lg {
+            .back-vehicle {
+                font-size: $font-size-3;
+            }
+            #vehicles-list-lg {
+                height: 100vh;
+                padding-bottom: $pd-9;
+                .vehicles-items {
+                    min-width: 29%;
+                    max-width: 30%;
+                    .btn-explore {
+                        margin-right: $pd-1;
+                    }
+                    .btn-build {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
     }
 }

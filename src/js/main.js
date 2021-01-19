@@ -1,9 +1,10 @@
 //Ssroll bar vehicles
 (function($) {
     $(window).on("load", function() {
-        $("#vehicles-list").mCustomScrollbar();
+        $("#vehicles-list , #vehicles-list-lg").mCustomScrollbar();
     });
 })(jQuery);
+
 
 function move(value) {
     $("#vehicle-list").mCustomScrollbar('scrollTo', value, {
@@ -273,4 +274,56 @@ $('.back').click(function() {
 
     }, 300);
 
+})
+
+//vehicle navbar
+$('#suv-link-lg').click(() => {
+    $('#vehicles-section-lg').removeClass('d-none');
+    $('.suv-lg').removeClass('d-none')
+    $('#vehicles-section-lg').addClass('animate__fadeIn');
+    $('.suv-lg').addClass('animate__fadeIn')
+    setTimeout(() => {
+        $('.vehicles-nav-lg').addClass('d-none');
+        $('#vehicles-section-lg').removeClass('animate__fadeIn');
+    }, 500);
+
+})
+$('#cars-link-lg').click(() => {
+    $('#vehicles-section-lg').removeClass('d-none');
+    $('.cars-lg').removeClass('d-none')
+    $('#vehicles-section-lg').addClass('animate__fadeIn');
+    $('.cars-lg').addClass('animate__fadeIn')
+    setTimeout(() => {
+        $('.vehicles-nav-lg').addClass('d-none');
+        $('#vehicles-section-lg').removeClass('animate__fadeIn');
+    }, 500);
+
+})
+$('#minivan-link-lg').click(() => {
+    $('#vehicles-section-lg').removeClass('d-none');
+    $('.minivan-lg').removeClass('d-none')
+    $('#vehicles-section-lg').addClass('animate__fadeIn');
+    $('.minivan-lg').addClass('animate__fadeIn')
+    setTimeout(() => {
+        $('.vehicles-nav-lg').addClass('d-none');
+        $('#vehicles-section-lg').removeClass('animate__fadeIn');
+    }, 500);
+
+})
+$('#electricfied-link-lg').click(() => {
+    $('#vehicles-section-lg').removeClass('d-none');
+    $('.electrified-lg').removeClass('d-none')
+    $('#vehicles-section-lg').addClass('animate__fadeIn');
+    $('.electrified-lg').addClass('animate__fadeIn')
+    setTimeout(() => {
+        $('.vehicles-nav-lg').addClass('d-none');
+        $('#vehicles-section-lg').removeClass('animate__fadeIn');
+    }, 500);
+
+})
+
+//back button vehicles
+$('.back-vehicle').click(function() {
+    $('#vehicles-section-lg').addClass('d-none');
+    $('.vehicles-nav-lg').removeClass('d-none');
 })

@@ -46,57 +46,5 @@
     }
     #vehicles-list {
         max-height: 1000px;
-        .vehicless-segmentation {
-            display: flex;
-            flex-wrap: wrap;
-            h2 {
-                padding: $pd-4 $pd-7 $pd-2;
-                @include text($font-size-1, $font-weight-500, $color-dark-blue-2);
-                width: 100%;
-            }
-            .vehicles-items {
-                width: 18%;
-                background-color: $color-white;
-                margin: $mg-4 0 $mg-4 $mg-5;
-                .vehicles-img {
-                    img:last-child {
-                        display: none;
-                    }
-                }
-                &:hover {
-                    img:last-child {
-                        display: block;
-                    }
-                    img:first-child {
-                        display: none;
-                    }
-                }
-                .vehicles-description {
-                    margin: 0 $mg-4;
-                    h3 {
-                        @include text($font-size-1, $font-weight-bold, $color-dark-blue-2);
-                        border-bottom: $border-2;
-                    }
-                    .price,
-                    .speed {
-                        @include text( $font-size-1, $font-weight-500, $color-dark-blue-2);
-                        span {
-                            @include text($font-size-1 - .2, $font-weight-normal, $color-dark-blue-2);
-                            margin-left: $mg-1;
-                        }
-                    }
-                }
-                .vehicle-button {
-                    padding: $pd-2 $pd-5;
-                    text-align: center;
-                    .btn-explore {
-                        margin-right: $mg-2;
-                    }
-                    .btn-build {
-                        margin-left: $mg-2;
-                    }
-                }
-            }
-        }
     }
 }
