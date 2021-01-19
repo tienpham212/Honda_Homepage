@@ -46,3 +46,13 @@
         background-repeat: no-repeat;
     }
 }
+
+@media screen and (max-width: 768px) {
+    @each $id in (1, 2, 3, 4) {
+        .slide-header-#{$id} {
+            background-image: url(../img/banner-#{$id}-xs.jpg);
+            background-position: center 57px;
+            background-size: cover;
+        }
+    }
+}

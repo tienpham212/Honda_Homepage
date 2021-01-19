@@ -189,6 +189,29 @@
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 768px) {
+  .slide-header-1 {
+    background-image: url(../img/banner-1-xs.jpg);
+    background-position: center 57px;
+    background-size: cover;
+  }
+  .slide-header-2 {
+    background-image: url(../img/banner-2-xs.jpg);
+    background-position: center 57px;
+    background-size: cover;
+  }
+  .slide-header-3 {
+    background-image: url(../img/banner-3-xs.jpg);
+    background-position: center 57px;
+    background-size: cover;
+  }
+  .slide-header-4 {
+    background-image: url(../img/banner-4-xs.jpg);
+    background-position: center 57px;
+    background-size: cover;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -983,9 +1006,9 @@ body {
 #carousel-header .swiper-container .swiper-wrapper .swiper-slide .btn-orange {
   position: absolute;
   bottom: 50px;
-  left: 44%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 1.4rem;
 }
 
