@@ -3,6 +3,9 @@
         outline: none;
     }
     @media screen and (max-width: 1000px) {
+        .honda-navbar .navbar-content .navbar-nav .nav-item .nav-link {
+            font-size: $font-size-1 - .1;
+        }
         .xs-button {
             color: white;
             &::after {

@@ -1,6 +1,7 @@
 #vehicles-section {
     animation-duration: .4s;
     padding-top: $pd-8 - 10;
+    white-space: nowrap;
     .vehicles-nav {
         border-bottom: $border-2;
         background-color: $color-white;

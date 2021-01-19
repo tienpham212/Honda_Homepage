@@ -7,7 +7,8 @@
         width: 100%;
     }
     .vehicles-items {
-        width: 18%;
+        min-width: 16%;
+        max-width: 21%;
         background-color: $color-white;
         margin: $mg-4 0 $mg-4 $mg-5;
         .vehicles-img {
@@ -41,11 +42,13 @@
         .vehicle-button {
             padding: $pd-2 $pd-5;
             text-align: center;
+            white-space: normal;
             .btn-explore {
-                margin-right: $mg-2;
+                margin-right: $pd-1;
+                margin-bottom: $pd-1;
             }
             .btn-build {
-                margin-left: $mg-2;
+                margin-left: 0;
             }
         }
     }

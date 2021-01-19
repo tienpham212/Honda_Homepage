@@ -780,6 +780,7 @@ body {
   -webkit-animation-duration: .4s;
           animation-duration: .4s;
   padding-top: 50px;
+  white-space: nowrap;
 }
 
 #vehicles-section .vehicles-nav {
@@ -1036,7 +1037,8 @@ body {
 }
 
 .vehicless-segmentation .vehicles-items {
-  width: 18%;
+  min-width: 16%;
+  max-width: 21%;
   background-color: white;
   margin: 20px 0 20px 30px;
 }
@@ -1082,14 +1084,16 @@ body {
 .vehicless-segmentation .vehicles-items .vehicle-button {
   padding: 10px 20px;
   text-align: center;
+  white-space: normal;
 }
 
 .vehicless-segmentation .vehicles-items .vehicle-button .btn-explore {
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .vehicless-segmentation .vehicles-items .vehicle-button .btn-build {
-  margin-left: 10px;
+  margin-left: 0;
 }
 
 .btn-explore,
@@ -1275,6 +1279,9 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
+  #header .honda-navbar .navbar-content .navbar-nav .nav-item .nav-link {
+    font-size: 1.1rem;
+  }
   #header .xs-button {
     color: white;
   }

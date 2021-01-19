@@ -325,5 +325,10 @@ $('#electricfied-link-lg').click(() => {
 //back button vehicles
 $('.back-vehicle').click(function() {
     $('#vehicles-section-lg').addClass('d-none');
+    $('.suv-lg').addClass('d-none');
+    $('.cars-lg').addClass('d-none');
+    $('.minivan-lg').addClass('d-none');
+    $('.electrified-lg').addClass('d-none')
+
     $('.vehicles-nav-lg').removeClass('d-none');
 })
