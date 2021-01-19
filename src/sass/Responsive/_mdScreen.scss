@@ -1,0 +1,20 @@
+@media screen and (max-width:768px) {
+    #header-menu-lg {
+        #vehicles-section-lg {
+            #vehicles-list-lg {
+                .vehicles-items {
+                    min-width: 40%;
+                    max-width: 43%;
+                    .btn-explore {
+                        margin-right: $pd-1;
+                        width: 100%;
+                    }
+                    .btn-build {
+                        margin-left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

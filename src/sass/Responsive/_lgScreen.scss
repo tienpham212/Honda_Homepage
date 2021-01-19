@@ -116,14 +116,29 @@
                 height: 100vh;
                 padding-bottom: $pd-9;
                 .vehicles-items {
-                    min-width: 29%;
-                    max-width: 30%;
+                    min-width: 20%;
+                    max-width: 28%;
                     .btn-explore {
                         margin-right: $pd-1;
+                        width: 100%;
                     }
                     .btn-build {
                         margin-left: 0;
+                        width: 100%;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    #vehicles-section {
+        #vehicles-list {
+            .vehicles-items {
+                .btn-explore,
+                .btn-build {
+                    padding: $pd-1 - 3 $pd-2;
                 }
             }
         }

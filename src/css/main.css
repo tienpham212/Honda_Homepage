@@ -1407,14 +1407,52 @@ body {
     padding-bottom: 90px;
   }
   #header-menu-lg #vehicles-section-lg #vehicles-list-lg .vehicles-items {
-    min-width: 29%;
-    max-width: 30%;
+    min-width: 20%;
+    max-width: 28%;
   }
   #header-menu-lg #vehicles-section-lg #vehicles-list-lg .vehicles-items .btn-explore {
     margin-right: 5px;
+    width: 100%;
   }
   #header-menu-lg #vehicles-section-lg #vehicles-list-lg .vehicles-items .btn-build {
     margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  #vehicles-section #vehicles-list .vehicles-items .btn-explore,
+  #vehicles-section #vehicles-list .vehicles-items .btn-build {
+    padding: 2px 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #header-menu-lg #vehicles-section-lg #vehicles-list-lg .vehicles-items {
+    min-width: 40%;
+    max-width: 43%;
+  }
+  #header-menu-lg #vehicles-section-lg #vehicles-list-lg .vehicles-items .btn-explore {
+    margin-right: 5px;
+    width: 100%;
+  }
+  #header-menu-lg #vehicles-section-lg #vehicles-list-lg .vehicles-items .btn-build {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #header-menu-lg #vehicles-section-lg #vehicles-list-lg .vehicles-items {
+    max-width: 100%;
+  }
+  #header-menu-lg #vehicles-section-lg #vehicles-list-lg .vehicles-items .btn-explore {
+    margin-right: 5px;
+    width: 100%;
+  }
+  #header-menu-lg #vehicles-section-lg #vehicles-list-lg .vehicles-items .btn-build {
+    margin-left: 0;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
