@@ -15,7 +15,8 @@
         .intro-item-content {
             position: absolute;
             bottom: 15%;
-            left: 25%;
+            left: 50%;
+            transform: translateX(-50%);
             p {
                 @include text($font-size-3, $font-weight-bold, $color-white)
             }
@@ -28,12 +29,18 @@
         background-repeat: no-repeat;
         background-position: center center;
         .intro-item-content {
+            transition: all .5s;
             position: absolute;
             bottom: 40%;
             left: 5%;
             p {
                 @include text($font-size-3, $font-weight-bold, $color-white)
             }
+        }
+        .overlay-intro {
+            width: 100%;
+            background-color: $color-dark-blue-3;
+            height: 100%;
         }
     }
 }

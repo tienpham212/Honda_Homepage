@@ -282,46 +282,36 @@ $('.back').click(function() {
 //vehicle navbar
 $('#suv-link-lg').click(() => {
     $('#vehicles-section-lg').removeClass('d-none');
-    $('.suv-lg').removeClass('d-none')
-    $('#vehicles-section-lg').addClass('animate__fadeIn');
-    $('.suv-lg').addClass('animate__fadeIn')
-    setTimeout(() => {
-        $('.vehicles-nav-lg').addClass('d-none');
-        $('#vehicles-section-lg').removeClass('animate__fadeIn');
-    }, 500);
+    $('.suv-lg').removeClass('d-none');
+    $('.suv-lg').addClass('animate__fadeIn');
+    $('.vehicles-nav-lg').addClass('d-none');
+
 
 })
 $('#cars-link-lg').click(() => {
     $('#vehicles-section-lg').removeClass('d-none');
-    $('.cars-lg').removeClass('d-none')
-    $('#vehicles-section-lg').addClass('animate__fadeIn');
-    $('.cars-lg').addClass('animate__fadeIn')
-    setTimeout(() => {
-        $('.vehicles-nav-lg').addClass('d-none');
-        $('#vehicles-section-lg').removeClass('animate__fadeIn');
-    }, 500);
+    $('.cars-lg').removeClass('d-none');
+    $('.cars-lg').addClass('animate__fadeIn');
+    $('.vehicles-nav-lg').addClass('d-none');
+
 
 })
 $('#minivan-link-lg').click(() => {
     $('#vehicles-section-lg').removeClass('d-none');
-    $('.minivan-lg').removeClass('d-none')
-    $('#vehicles-section-lg').addClass('animate__fadeIn');
-    $('.minivan-lg').addClass('animate__fadeIn')
-    setTimeout(() => {
-        $('.vehicles-nav-lg').addClass('d-none');
-        $('#vehicles-section-lg').removeClass('animate__fadeIn');
-    }, 500);
+    $('.minivan-lg').removeClass('d-none');
+    $('.minivan-lg').addClass('animate__fadeIn');
+    $('.vehicles-nav-lg').addClass('d-none');
+
+
 
 })
 $('#electricfied-link-lg').click(() => {
     $('#vehicles-section-lg').removeClass('d-none');
-    $('.electrified-lg').removeClass('d-none')
-    $('#vehicles-section-lg').addClass('animate__fadeIn');
-    $('.electrified-lg').addClass('animate__fadeIn')
-    setTimeout(() => {
-        $('.vehicles-nav-lg').addClass('d-none');
-        $('#vehicles-section-lg').removeClass('animate__fadeIn');
-    }, 500);
+    $('.electrified-lg').removeClass('d-none');
+    $('.electrified-lg').addClass('animate__fadeIn');
+    $('.vehicles-nav-lg').addClass('d-none');
+
+
 
 })
 

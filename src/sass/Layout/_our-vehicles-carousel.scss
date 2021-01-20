@@ -95,11 +95,11 @@
         .carousel-indicators {
             padding: 0 $pd-5;
             top: -20px;
-            bottom: unset;
-            display: flex;
-            width: 50%;
+            margin: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
             color: $color-dark-blue-1;
-            margin: 0%;
             justify-content: space-around;
             font-size: $font-size-1;
             font-weight: $font-weight-bold;
@@ -112,6 +112,33 @@
                 &:hover {
                     cursor: pointer;
                 }
+            }
+        }
+    }
+    .carousel-indicators-sm {
+        background-color: $color-white;
+        width: 60%;
+        border: $border-2;
+        padding: $pd-4;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        top: -20px;
+        &-header {
+            align-items: center;
+            &-text {
+                p {
+                    @include text($font-size-1, $font-weight-300, $color-blue-1);
+                    margin-bottom: $pd-1;
+                }
+                span {
+                    @include text($font-size-1, $font-weight-bold, black)
+                }
+            }
+            i {
+                font-size: $font-size-3 + .4;
+                color: $color-dark-blue-1;
             }
         }
     }

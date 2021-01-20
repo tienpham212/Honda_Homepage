@@ -144,3 +144,43 @@
         }
     }
 }
+
+@media screen and (max-width:1050px) {
+    #intro {
+        .intro-item-1 {
+            .intro-item-content {
+                width: 90%;
+            }
+        }
+        .intro-item-2 {
+            .intro-item-content {
+                position: absolute;
+                bottom: 15%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60%;
+                p {
+                    @include text($font-size-3, $font-weight-bold, $color-white)
+                }
+            }
+            .overlay-intro {
+                width: 100%;
+                background-color: $color-dark-blue-3;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    #our-vehicles {
+        h1 {
+            font-size: $font-size-4 - 1.5;
+        }
+        .carousel-indicators-config {
+            .carousel-indicators {
+                width: 90%;
+            }
+        }
+    }
+}

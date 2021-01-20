@@ -18,3 +18,11 @@
         }
     }
 }
+
+@media screen and (max-width:768px) {
+    #our-vehicles {
+        h1 {
+            font-size: $font-size-4 - 2;
+        }
+    }
+}
