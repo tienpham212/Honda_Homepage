@@ -337,12 +337,18 @@ $(document).ready(function() {
 
     //slidetoggle build up for navbar sm
     $('#navbar-toggle-sm').click(() => {
-        $('#navbar-sm').slideToggle();
-    })
+            $('#navbar-sm').slideToggle();
+        })
+        //arrow function k co this duoi la cach dung event
+        // $('#navbar-sm li').click((e) => {
+        //     $('.carousel-indicators-sm-header-text span').html();
+        //     $('#navbar-sm').slideUp();
+        //     console.log($(e.target).html());
 
-    $('#navbar-sm li').click(() => {
-        console.log($(this).html());
-        $('.carousel-indicators-sm-header-text span').html();
+
+    // })
+    $('#navbar-sm li').click(function() {
+        $('.carousel-indicators-sm-header-text span').html($(this).html());
         $('#navbar-sm').slideUp();
 
 

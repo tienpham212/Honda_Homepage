@@ -11,7 +11,7 @@
         .item-content {
             width: 100%;
             .item-content-top {
-                width: 25%;
+                width: 35%;
                 padding: $pd-7 0 $pd-8 $pd-9;
                 p {
                     font-weight: $font-weight-bold;
@@ -32,7 +32,7 @@
                 }
                 .vehicle-value {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: start;
                     margin-bottom: $mg-4;
                     .price,
                     .rating {
@@ -40,6 +40,7 @@
                             font-size: $font-size-5 - 1;
                             font-weight: $font-weight-300;
                             margin-bottom: 0;
+                            margin-right: $mg-6;
                         }
                         span {
                             font-weight: $font-weight-bold;

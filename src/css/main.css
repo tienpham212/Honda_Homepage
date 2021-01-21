@@ -195,6 +195,72 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .our-vehicles-items-1 {
+    background-image: url(../img/slider-1.jpg);
+    background-position: -250px 0;
+    background-size: cover;
+    height: 100%;
+  }
+  .our-vehicles-items-2 {
+    background-image: url(../img/slider-2.jpg);
+    background-position: -250px 0;
+    background-size: cover;
+    height: 100%;
+  }
+  .our-vehicles-items-3 {
+    background-image: url(../img/slider-3.jpg);
+    background-position: -250px 0;
+    background-size: cover;
+    height: 100%;
+  }
+  .our-vehicles-items-4 {
+    background-image: url(../img/slider-4.jpg);
+    background-position: -250px 0;
+    background-size: cover;
+    height: 100%;
+  }
+  .our-vehicles-items-5 {
+    background-image: url(../img/slider-5.jpg);
+    background-position: -250px 0;
+    background-size: cover;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .our-vehicles-items-1 {
+    background-image: url(../img/slider-1-xs.jpg);
+    background-position: center 0;
+    background-size: cover;
+    height: 100%;
+  }
+  .our-vehicles-items-2 {
+    background-image: url(../img/slider-2-xs.jpg);
+    background-position: center 0;
+    background-size: cover;
+    height: 100%;
+  }
+  .our-vehicles-items-3 {
+    background-image: url(../img/slider-3-xs.jpg);
+    background-position: center 0;
+    background-size: cover;
+    height: 100%;
+  }
+  .our-vehicles-items-4 {
+    background-image: url(../img/slider-4-xs.jpg);
+    background-position: center 0;
+    background-size: cover;
+    height: 100%;
+  }
+  .our-vehicles-items-5 {
+    background-image: url(../img/slider-5-xs.jpg);
+    background-position: center 0;
+    background-size: cover;
+    height: 100%;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -376,7 +442,7 @@ body {
 }
 
 #our-vehicles .our-vehicles-inner .item-content .item-content-top {
-  width: 25%;
+  width: 35%;
   padding: 40px 0 60px 90px;
 }
 
@@ -404,7 +470,7 @@ body {
 
 #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   margin-bottom: 20px;
 }
 
@@ -413,6 +479,7 @@ body {
   font-size: 3.4rem;
   font-weight: 300;
   margin-bottom: 0;
+  margin-right: 60px;
 }
 
 #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value .price span,
@@ -1269,6 +1336,20 @@ body {
   #our-vehicles .carousel-indicators-config .carousel-indicators {
     width: 80%;
   }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top {
+    width: 40%;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top p {
+    margin-bottom: 20px;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value .price p,
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value .rating p {
+    font-size: 2.9rem;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-bottom img {
+    height: 65px;
+    width: 200px;
+  }
 }
 
 #header button.navbar-toggler {
@@ -1440,6 +1521,30 @@ body {
   }
   #our-vehicles .carousel-indicators-config .carousel-indicators {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #our-vehicles .carousel-indicators-config .carousel-indicators {
+    width: 80%;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top {
+    width: 49%;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top p {
+    margin-bottom: 20px;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value .price p,
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value .rating p {
+    font-size: 2.9rem;
+    margin-right: 30px;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-bottom {
+    border-top-color: transparent;
+    width: 60%;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-bottom img {
+    width: 150px;
   }
 }
 

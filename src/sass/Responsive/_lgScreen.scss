@@ -184,3 +184,39 @@
         }
     }
 }
+
+@media screen and (max-width:992px) {
+    #our-vehicles {
+        .carousel-indicators-config {
+            .carousel-indicators {
+                width: 80%;
+            }
+        }
+        .our-vehicles-inner {
+            .item-content {
+                .item-content-top {
+                    width: 49%;
+                    p {
+                        margin-bottom: $mg-4;
+                    }
+                    .vehicle-value {
+                        .price,
+                        .rating {
+                            p {
+                                font-size: $font-size-5 - 1.5;
+                                margin-right: $mg-5;
+                            }
+                        }
+                    }
+                }
+                .item-content-bottom {
+                    border-top-color: transparent;
+                    width: 60%;
+                    img {
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}

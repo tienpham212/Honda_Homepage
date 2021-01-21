@@ -56,3 +56,25 @@
         }
     }
 }
+
+@media screen and (max-width: 992px) {
+    @each $id in (1, 2, 3, 4, 5) {
+        .our-vehicles-items-#{$id} {
+            background-image: url(../img/slider-#{$id}.jpg);
+            background-position: -250px 0;
+            background-size: cover;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    @each $id in (1, 2, 3, 4, 5) {
+        .our-vehicles-items-#{$id} {
+            background-image: url(../img/slider-#{$id}-xs.jpg);
+            background-position: center 0;
+            background-size: cover;
+            height: 100%;
+        }
+    }
+}
