@@ -353,4 +353,38 @@ $(document).ready(function() {
 
 
     })
+
+    //match prev next click to content
+    let countVehicle = 0;
+    $('.carousel-control-prev').click(function() {
+        if (countVehicle == 0) {
+            countVehicle = 4
+        } else {
+            countVehicle--;
+        }
+
+        $('#navbar-sm li').each(function(i) {
+            if (i == countVehicle) {
+                $(this).addClass('active');
+                $('.carousel-indicators-sm-header-text span').html($(this).html());
+            }
+        })
+    })
+    $('.carousel-control-next').click(function() {
+        if (countVehicle == 4) {
+            countVehicle = 0
+        } else {
+            countVehicle++;
+        }
+
+        $('#navbar-sm li').each(function(i) {
+            if (i == countVehicle) {
+                $(this).addClass('active');
+                $('.carousel-indicators-sm-header-text span').html($(this).html());
+            }
+        })
+    })
+
+
+
 });

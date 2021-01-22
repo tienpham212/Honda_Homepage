@@ -64,11 +64,12 @@
 .services-item-1 {
   background-image: url(../img/item-1.jpg);
   background-position: center 0;
-  background-size: 140%;
+  background-size: cover;
   height: 300px;
   position: relative;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.08);
   transition: all .5s;
+  background-repeat: no-repeat;
 }
 
 .services-item-1:hover {
@@ -78,11 +79,12 @@
 .services-item-2 {
   background-image: url(../img/item-2.jpg);
   background-position: center 0;
-  background-size: 140%;
+  background-size: cover;
   height: 300px;
   position: relative;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.08);
   transition: all .5s;
+  background-repeat: no-repeat;
 }
 
 .services-item-2:hover {
@@ -92,11 +94,12 @@
 .services-item-3 {
   background-image: url(../img/item-3.jpg);
   background-position: center 0;
-  background-size: 140%;
+  background-size: cover;
   height: 300px;
   position: relative;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.08);
   transition: all .5s;
+  background-repeat: no-repeat;
 }
 
 .services-item-3:hover {
@@ -106,11 +109,12 @@
 .services-item-4 {
   background-image: url(../img/item-4.jpg);
   background-position: center 0;
-  background-size: 140%;
+  background-size: cover;
   height: 300px;
   position: relative;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.08);
   transition: all .5s;
+  background-repeat: no-repeat;
 }
 
 .services-item-4:hover {
@@ -1548,6 +1552,90 @@ body {
   }
 }
 
+@media screen and (max-width: 992px) {
+  #services {
+    padding: 30px 40px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #guide {
+    padding-bottom: 30px;
+  }
+  #guide .guide-left {
+    margin-bottom: 20px;
+  }
+  #guide .guide-left-content,
+  #guide .guide-right-content {
+    width: 80%;
+  }
+  #guide .guide-left-content p,
+  #guide .guide-right-content p {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: white;
+  }
+  #guide .guide-left-content h3,
+  #guide .guide-right-content h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+  }
+  #guide .guide-left-content .btn-go,
+  #guide .guide-right-content .btn-go {
+    padding: 5px 14px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #discover {
+    padding: 0 10% 60px;
+  }
+  #discover .discover-text h1 {
+    font-size: 4.4rem;
+  }
+  #discover .discover-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  #discover .discover-content .discover-item-inner {
+    position: absolute;
+    top: 47%;
+    text-align: center;
+    padding: 0 10%;
+  }
+  #discover .discover-content .discover-item-inner h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #00446B;
+    margin-bottom: 30px;
+  }
+  #discover .discover-content .discover-item-inner p {
+    color: #00324f;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  #discover .discover-content .btn-go {
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #discover .discover-content .play-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+  }
+  #discover .discover-content .btn-orange {
+    font-size: 1.2rem;
+  }
+  #discover .discover-content .btn-orange:hover {
+    border-color: #e42525;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #header-menu-lg #vehicles-section-lg #vehicles-list-lg .vehicles-items {
     min-width: 40%;
@@ -1567,6 +1655,119 @@ body {
   #our-vehicles h1 {
     font-size: 4rem;
     padding-bottom: 40px;
+  }
+  #our-vehicles .our-vehicles-inner {
+    height: 560px;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-description {
+    padding-top: 0;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-description p {
+    display: none;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value {
+    justify-content: space-between;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value .price p,
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value .rating p {
+    font-size: 2.3rem;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value .price span,
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value .rating span {
+    margin-right: 30px;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-value .rating p {
+    text-align: end;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-top .vehicle-button .btn-orange {
+    margin-right: 30px;
+  }
+  #our-vehicles .our-vehicles-inner .item-content .item-content-bottom {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #intro .intro-item-1 {
+    margin-bottom: 20px;
+  }
+  #intro .intro-item-1 .intro-item-content {
+    width: 90%;
+  }
+  #intro .intro-item-2 .intro-item-content {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+  }
+  #intro .intro-item-2 .intro-item-content p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+  }
+  #intro .intro-item-2 .overlay-intro {
+    width: 100%;
+    background-color: #06456ac9;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #discover {
+    padding: 0 10% 60px;
+  }
+  #discover .discover-text h1 {
+    font-size: 3.4rem;
+    padding-bottom: 20px;
+  }
+  #discover .discover-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  #discover .discover-content .discover-item-inner {
+    position: absolute;
+    top: 47%;
+    text-align: center;
+    padding: 0 10%;
+  }
+  #discover .discover-content .discover-item-inner h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #00446B;
+    margin-bottom: 30px;
+  }
+  #discover .discover-content .discover-item-inner p {
+    color: #00324f;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  #discover .discover-content .btn-go {
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #discover .discover-content .play-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+  }
+  #discover .discover-content .btn-orange {
+    font-size: 1.2rem;
+  }
+  #discover .discover-content .btn-orange:hover {
+    border-color: #e42525;
   }
 }
 

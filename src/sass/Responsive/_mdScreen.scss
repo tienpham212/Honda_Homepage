@@ -25,5 +25,129 @@
             font-size: $font-size-4 - 2;
             padding-bottom: $pd-7;
         }
+        .our-vehicles-inner {
+            height: 560px;
+            .item-content {
+                .item-content-top {
+                    position: absolute;
+                    bottom: 12%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    text-align: center;
+                    padding: 0;
+                    .vehicle-description {
+                        padding-top: 0;
+                        p {
+                            display: none;
+                        }
+                    }
+                    .vehicle-value {
+                        justify-content: space-between;
+                        .price,
+                        .rating {
+                            p {
+                                font-size: 2.3rem;
+                            }
+                            span {
+                                margin-right: $mg-5;
+                            }
+                        }
+                        .rating {
+                            p {
+                                text-align: end;
+                            }
+                        }
+                    }
+                    .vehicle-button {
+                        .btn-orange {
+                            margin-right: $mg-5;
+                        }
+                    }
+                }
+                .item-content-bottom {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #intro {
+        .intro-item-1 {
+            margin-bottom: $mg-4;
+            .intro-item-content {
+                width: 90%;
+            }
+        }
+        .intro-item-2 {
+            .intro-item-content {
+                position: absolute;
+                bottom: 15%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60%;
+                p {
+                    @include text($font-size-3, $font-weight-bold, $color-white)
+                }
+            }
+            .overlay-intro {
+                width: 100%;
+                background-color: $color-dark-blue-3;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #discover {
+        padding: 0 10% $pd-8;
+        .discover-text {
+            h1 {
+                font-size: $font-size-5 - 1;
+                padding-bottom: $pd-5;
+            }
+            p {
+                font-size: $font-size-1;
+                margin-bottom: $mg-5;
+            }
+        }
+        .discover-content {
+            .discover-item-inner {
+                position: absolute;
+                top: 47%;
+                text-align: center;
+                padding: 0 10%;
+                h3 {
+                    @include text($font-size-2, $font-weight-500, $color-dark-blue-1);
+                    margin-bottom: $mg-5;
+                }
+                p {
+                    color: $color-dark-blue-2;
+                    font-size: $font-size-1;
+                    margin-bottom: $mg-4;
+                }
+            }
+            .btn-go {
+                text-align: center;
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .play-button {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 15%;
+            }
+            .btn-orange {
+                font-size: $font-size-1;
+                &:hover {
+                    border-color: $color-orange;
+                }
+            }
+        }
     }
 }
