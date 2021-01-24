@@ -249,7 +249,7 @@
     }
 }
 
-@media screen and (max-width:992px) {
+@media screen and (max-width:1050px) {
     #discover {
         padding: 0 10% $pd-8;
         .discover-text {
@@ -261,39 +261,21 @@
                 margin-bottom: $mg-5;
             }
         }
-        .discover-content {
-            .discover-item-inner {
-                position: absolute;
-                top: 47%;
-                text-align: center;
-                padding: 0 10%;
-                h3 {
-                    @include text($font-size-2, $font-weight-500, $color-dark-blue-1);
-                    margin-bottom: $mg-5;
-                }
-                p {
-                    color: $color-dark-blue-2;
-                    font-size: $font-size-1;
-                    margin-bottom: $mg-4;
-                }
+    }
+}
+
+@media screen and (max-width:992px) {
+    #footer {
+        .footer-logo {
+            img {
+                width: 120px;
+                height: 100px;
             }
-            .btn-go {
-                text-align: center;
-                position: absolute;
-                bottom: 5%;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            .play-button {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                top: 15%;
-            }
-            .btn-orange {
-                font-size: $font-size-1;
-                &:hover {
-                    border-color: $color-orange;
+        }
+        .footer-contact {
+            .footer-informed {
+                .btn-explore {
+                    transform: translateX(105%);
                 }
             }
         }

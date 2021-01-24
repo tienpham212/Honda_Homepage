@@ -31,3 +31,20 @@
         }
     }
 }
+
+@media screen and (max-width:1500px) {
+    #discover {
+        .discover-content {
+            .discover-item-inner {
+                h3 {
+                    font-size: $font-size-1;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 1rem;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+}
