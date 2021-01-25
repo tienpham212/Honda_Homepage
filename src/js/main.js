@@ -37,97 +37,120 @@ $(document).ready(function() {
         }
     })
 
+    const removeClass = function(ele, className) {
+        $(ele).removeClass(className)
+    }
+
+    const addClass = function(ele, className) {
+        $(ele).addClass(className)
+    }
+
     //Include active class for header navbar
     $('.nav-link').click(function() {
-        if ($(this).hasClass('active')) { $(this).removeClass('active') } else {
-            $('.nav-link').removeClass('active');
-            $(this).addClass('active')
+        if ($(this).hasClass('active')) { removeClass(this, 'active') } else {
+            removeClass('.nav-link', 'active');
+            addClass(this, 'active');
         };
     })
 
+    //frist click navbar
+    const firstClick = function(idSection, animateClass) {
+            removeClass(idSection, 'd-none');
+            addClass(idSection, animateClass);
+        }
+        //click again navbar
+
+    const againClick = function(idSection, animateClass) {
+        addClass(idSection, animateClass);
+        setTimeout(function() {
+            addClass(idSection, 'd-none');
+            removeClass(idSection, animateClass);
+        }, 300)
+    }
+
+    const diffirentClick = function(idKeep, ...idRemove) {
+        $(idKeep).removeClass('d-none');
+        for (let value of idRemove) {
+            $(value).addClass('d-none');
+        }
+    }
+
+
+
+
+
+
     let temp = '';
     $('.nav-link').click(function() {
-            if (temp == '' && $(this).attr('id') === 'vehicle') {
-                $('#vehicles-section').removeClass('d-none');
-                $('#vehicles-section').addClass('animate__fadeInUp');
-                $('body').addClass('overflow')
-                temp = $(this).attr('id');
-            } else if (temp == '' && $(this).attr('id') === 'shopping') {
-                $('#shopping-tools').removeClass('d-none');
-                $('#shopping-tools').addClass('animate__fadeInDown');
-                temp = $(this).attr('id');
-            } else if (temp == '' && $(this).attr('id') === 'owner') {
-                $('#owner-content').removeClass('d-none');
-                $('#owner-content').addClass('animate__fadeInDown');
-                temp = $(this).attr('id');
-            } else if (temp == '' && $(this).attr('id') === 'explore') {
-                $('#explore-content').removeClass('d-none');
-                $('#explore-content').addClass('animate__fadeInDown');
-                temp = $(this).attr('id');
+            if (temp == '') {
+                switch ($(this).attr('id')) {
+                    case 'vehicle':
+                        firstClick('#vehicles-section', 'animate__fadeInUp')
+                        $('body').addClass('overflow')
+                        temp = $(this).attr('id');
+                        break;
+                    case 'shopping':
+                        firstClick('#shopping-tools', 'animate__fadeInDown')
+                        temp = $(this).attr('id');
+                        break;
+                    case 'owner':
+                        firstClick('#owner-content', 'animate__fadeInDown')
+                        temp = $(this).attr('id');
+                        break;
+                    case 'explore':
+                        firstClick('#explore-content', 'animate__fadeInDown')
+                        temp = $(this).attr('id');
+                        break;
+                    default:
+                        alert('click vehicle , shopping , owner , explore only')
+                        break;
+                }
             } else {
                 if (temp === $(this).attr('id')) {
-                    if ($(this).attr('id') === "vehicle") {
-                        $('#vehicles-section').addClass('animate__fadeOutDown');
-                        $('body').removeClass('overflow')
-                        setTimeout(function() {
-                            $('#vehicles-section').addClass('d-none');
-                            $('#vehicles-section').removeClass('animate__fadeOutDown');
-                        }, 300)
+                    switch ($(this).attr('id')) {
+                        case 'vehicle':
+                            $('body').removeClass('overflow')
+                            againClick('#vehicles-section', 'animate__fadeOutDown')
+                            temp = '';
+                            break;
+                        case 'shopping':
+                            againClick('#shopping-tools', 'animate__fadeOutUp');
+                            temp = '';
+                            break;
 
-                        temp = '';
-                    } else if ($(this).attr('id') === "shopping") {
-                        $('#shopping-tools').addClass('animate__fadeOutUp');
-                        setTimeout(function() {
-                            $('#shopping-tools').addClass('d-none');
-                            $('#shopping-tools').removeClass('animate__fadeOutUp');
-                        }, 300)
-                        temp = '';
-                    } else if ($(this).attr('id') === "owner") {
-                        $('#owner-content').addClass('animate__fadeOutUp');
-                        setTimeout(function() {
-                            $('#owner-content').addClass('d-none');
-                            $('#owner-content').removeClass('animate__fadeOutUp');
-                        }, 300)
-                        temp = '';
-                    } else if ($(this).attr('id') === "explore") {
-                        $('#explore-content').addClass('animate__fadeOutUp');
-                        setTimeout(function() {
-                            $('#explore-content').addClass('d-none');
-                            $('#explore-content').removeClass('animate__fadeOutUp');
-                        }, 300)
-                        temp = '';
+                        case 'owner':
+                            againClick('#owner-content', 'animate__fadeOutUp');
+                            temp = '';
+                            break;
+                        case 'explore':
+                            againClick('#explore-content', 'animate__fadeOutUp');
+                            temp = '';
+                            break;
                     }
 
                 } else {
-                    if ($(this).attr('id') === "shopping") {
-                        $('#vehicles-section').addClass('d-none');
-                        $('body').removeClass('overflow')
-                        $('#shopping-tools').removeClass('d-none');
-                        $('#owner-content').addClass('d-none');
-                        $('#explore-content').addClass('d-none');
-                        temp = $(this).attr('id');
+                    switch ($(this).attr('id')) {
+                        case 'vehicle':
+                            diffirentClick('#vehicles-section', '#shopping-tools', '#owner-content', '#explore-content');
+                            temp = $(this).attr('id');
+                            addClass('body', 'overflow');
+                            break;
+                        case 'shopping':
+                            diffirentClick('#shopping-tools', '#vehicles-section', '#owner-content', '#explore-content');
+                            temp = $(this).attr('id');
+                            removeClass('body', 'overflow');
+                            break;
 
-                    }
-                    if ($(this).attr('id') === "vehicle") {
-                        $('#shopping-tools').addClass('d-none');
-                        $('#vehicles-section').removeClass('d-none');
-                        $('#owner-content').addClass('d-none');
-                        $('#explore-content').addClass('d-none');
-                        temp = $(this).attr('id');
-                    }
-                    if ($(this).attr('id') === "owner") {
-                        $('#shopping-tools').addClass('d-none');
-                        $('#vehicles-section').addClass('d-none');
-                        $('#owner-content').removeClass('d-none');
-                        $('#explore-content').addClass('d-none');
-                        temp = $(this).attr('id');
-                    }
-                    if ($(this).attr('id') === "explore") {
-                        $('#shopping-tools').addClass('d-none');
-                        $('#vehicles-section').addClass('d-none');
-                        $('#owner-content').addClass('d-none');
-                        $('#explore-content').removeClass('d-none');
-                        temp = $(this).attr('id');
+                        case 'owner':
+                            diffirentClick('#owner-content', '#shopping-tools', '#vehicles-section', '#explore-content');
+                            temp = $(this).attr('id');
+                            removeClass('body', 'overflow');
+                            break;
+                        case 'explore':
+                            diffirentClick('#explore-content', '#shopping-tools', '#vehicles-section', '#owner-content', );
+                            temp = $(this).attr('id');
+                            removeClass('body', 'overflow');
+                            break;
                     }
 
                 }
@@ -148,191 +171,112 @@ $(document).ready(function() {
 
 
     $('.back-to-top').click(function() {
-            $('body,html').animate({
-                scrollTop: 0
-            }, 0);
-        })
-        //create rotate animate for collapse button in lg 
+        $('body,html').animate({
+            scrollTop: 0
+        }, 0);
+    })
+
+
+    //create rotate animate for collapse button in lg 
+    const checkHastoAddorRemove = function(idSection, className) {
+        if ($(idSection).hasClass(className)) {
+            removeClass(idSection, className);
+        } else {
+            addClass(idSection, className);
+        }
+    }
     $('.navbar-toggler').click(function() {
-            if ($('.navbar-toggler').hasClass('rotate')) {
-                $('.navbar-toggler').removeClass('rotate')
-            } else {
-                $('.navbar-toggler').addClass('rotate')
-            }
+            checkHastoAddorRemove('.navbar-toggler', 'rotate');
         })
         //create rotae animate for collapse button in navbar sm
     $('#navbar-toggle-sm').click(function() {
-            if ($('#navbar-toggle-sm').hasClass('active')) {
-                $('#navbar-toggle-sm').removeClass('active')
-            } else {
-                $('#navbar-toggle-sm').addClass('active')
-            }
+            checkHastoAddorRemove('#navbar-toggle-sm', 'active');
         })
         //Stop scroll bar when collapse menu appear
     let tempNav = '';
     $('.collapse-navbar').click(function() {
             if (tempNav == '') {
-                $('#header-menu-lg').removeClass('d-none');
-                $('#header-menu-lg').addClass('animate__fadeInDown');
-                $('body').addClass('overflow');
+                firstClick('#header-menu-lg', 'animate__fadeInDown');
+                addClass('body', 'overflow');
                 tempNav = $(this).attr('id');
             } else {
-                $('#header-menu-lg').addClass('animate__fadeOutUp');
-                $('body').removeClass('overflow');
-                setTimeout(function() {
-                    $('#header-menu-lg').addClass('d-none');
-                    $('#header-menu-lg').removeClass('animate__fadeOutUp');
-                    $('.main-nav').removeClass('d-none');
-                    $('.vehicles-nav-lg').addClass('d-none');
-                    $('.shopping-tools-lg').addClass('d-none');
-                    $('.owners-lg').addClass('d-none');
-                    $('.explore-lg').addClass('d-none');
-
-                }, 500);
+                removeClass('body', 'overflow');
+                againClick('#header-menu-lg', 'animate__fadeOutUp');
+                diffirentClick('.main-nav', '.vehicles-nav-lg', '.shopping-tools-lg', '.owners-lg', '.explore-lg');
                 tempNav = '';
-
-
-
             }
         })
         //create slide menu for header 
+    const apearSection = function(idSection, animateName) {
+        setTimeout(function() {
+            removeClass(idSection, 'd-none');
+            addClass(idSection, animateName);
+        }, 300)
+        setTimeout(function() {
+            removeClass(idSection, animateName);
+        }, 500)
+    }
     $('.nav-link-lg').click(function() {
-            $('.main-nav').addClass('animate__fadeOut')
-            setTimeout(function() {
-                $('.main-nav').addClass('d-none');
-                $('.main-nav').removeClass('animate__fadeOut');
-            }, 300)
-            if ($(this).hasClass('nav-link-vehicles')) {
-                setTimeout(function() {
-                    $('.vehicles-nav-lg').removeClass('d-none');
-                    $('.vehicles-nav-lg').addClass('animate__fadeIn');
-                }, 300)
-                setTimeout(function() {
-                    $('.vehicles-nav-lg').removeClass('animate__fadeIn');
-                }, 500)
-            }
-            if ($(this).hasClass('nav-link-shopping')) {
-                setTimeout(function() {
-                    $('.shopping-tools-lg').removeClass('d-none');
-                    $('.shopping-tools-lg').addClass('animate__fadeIn');
-                }, 300)
-                setTimeout(function() {
-                    $('.shopping-tools-lg').removeClass('animate__fadeIn');
-                }, 500)
-            }
-            if ($(this).hasClass('nav-link-owner')) {
-                setTimeout(function() {
-                    $('.owners-lg').removeClass('d-none');
-                    $('.owners-lg').addClass('animate__fadeIn');
-                }, 300)
-                setTimeout(function() {
-                    $('.owners-lg').removeClass('animate__fadeIn');
-                }, 500)
-            }
-            if ($(this).hasClass('nav-link-explore')) {
-                setTimeout(function() {
-                    $('.explore-lg').removeClass('d-none');
-                    $('.explore-lg').addClass('animate__fadeIn');
-                }, 300)
-                setTimeout(function() {
-                    $('.explore-lg').removeClass('animate__fadeIn');
-                }, 500)
-            }
-        })
+        againClick('.main-nav', 'animate__fadeOut');
+        if ($(this).hasClass('nav-link-vehicles')) {
+            apearSection('.vehicles-nav-lg', 'animate__fadeIn');
+        }
+        if ($(this).hasClass('nav-link-shopping')) {
+            apearSection('.shopping-tools-lg', 'animate__fadeIn');
+
+        }
+        if ($(this).hasClass('nav-link-owner')) {
+            apearSection('.owners-lg', 'animate__fadeIn');
+
+        }
+        if ($(this).hasClass('nav-link-explore')) {
+            apearSection('.explore-lg', 'animate__fadeIn');
+        }
+    })
+
+    const clickBackButton = function(idSection) {
+            $(idSection).addClass('animate__fadeOut');
+            setTimeout(() => {
+                $(idSection).addClass('d-none');
+                $(idSection).removeClass('animate__fadeOut');
+                $('.main-nav').removeClass('d-none');
+                $('.main-nav').addClass('animate__fadeIn');
+                setTimeout(() => {
+                    $('.main-nav').removeClass('animate__fadeIn');
+                }, 200);
+
+            }, 300);
+        }
         //create back button for menu lg
     $('.back').click(function() {
-        $('.vehicles-nav-lg').addClass('animate__fadeOut');
-        setTimeout(() => {
-            $('.vehicles-nav-lg').addClass('d-none');
-            $('.vehicles-nav-lg').removeClass('animate__fadeOut');
-            $('.main-nav').removeClass('d-none');
-            $('.main-nav').addClass('animate__fadeIn');
-            setTimeout(() => {
-                $('.main-nav').removeClass('animate__fadeIn');
-            }, 200);
-
-        }, 300);
-        $('.shopping-tools-lg').addClass('animate__fadeOut');
-        setTimeout(() => {
-            $('.shopping-tools-lg').addClass('d-none');
-            $('.shopping-tools-lg').removeClass('animate__fadeOut');
-            $('.main-nav').removeClass('d-none');
-            $('.main-nav').addClass('animate__fadeIn');
-            setTimeout(() => {
-                $('.main-nav').removeClass('animate__fadeIn');
-            }, 200);
-
-        }, 300);
-        $('.owners-lg').addClass('animate__fadeOut');
-        setTimeout(() => {
-            $('.owners-lg').addClass('d-none');
-            $('.owners-lg').removeClass('animate__fadeOut');
-            $('.main-nav').removeClass('d-none');
-            $('.main-nav').addClass('animate__fadeIn');
-            setTimeout(() => {
-                $('.main-nav').removeClass('animate__fadeIn');
-            }, 200);
-
-        }, 300);
-        $('.explore-lg').addClass('animate__fadeOut');
-        setTimeout(() => {
-            $('.explore-lg').addClass('d-none');
-            $('.explore-lg').removeClass('animate__fadeOut');
-            $('.main-nav').removeClass('d-none');
-            $('.main-nav').addClass('animate__fadeIn');
-            setTimeout(() => {
-                $('.main-nav').removeClass('animate__fadeIn');
-            }, 200);
-
-        }, 300);
-
+        clickBackButton('.vehicles-nav-lg');
+        clickBackButton('.shopping-tools-lg');
+        clickBackButton('.owners-lg');
+        clickBackButton('.explore-lg');
     })
-
-    //vehicle navbar
+    const jumptoSection = function(idSection) {
+            $('#vehicles-section-lg').removeClass('d-none');
+            $(idSection).removeClass('d-none');
+            $(idSection).addClass('animate__fadeIn');
+            $('.vehicles-nav-lg').addClass('d-none');
+        }
+        //vehicle navbar
     $('#suv-link-lg').click(() => {
-        $('#vehicles-section-lg').removeClass('d-none');
-        $('.suv-lg').removeClass('d-none');
-        $('.suv-lg').addClass('animate__fadeIn');
-        $('.vehicles-nav-lg').addClass('d-none');
-
-
+        jumptoSection('.suv-lg');
     })
     $('#cars-link-lg').click(() => {
-        $('#vehicles-section-lg').removeClass('d-none');
-        $('.cars-lg').removeClass('d-none');
-        $('.cars-lg').addClass('animate__fadeIn');
-        $('.vehicles-nav-lg').addClass('d-none');
-
-
+        jumptoSection('.cars-lg');
     })
     $('#minivan-link-lg').click(() => {
-        $('#vehicles-section-lg').removeClass('d-none');
-        $('.minivan-lg').removeClass('d-none');
-        $('.minivan-lg').addClass('animate__fadeIn');
-        $('.vehicles-nav-lg').addClass('d-none');
-
-
-
+        jumptoSection('.minivan-lg');
     })
     $('#electricfied-link-lg').click(() => {
-        $('#vehicles-section-lg').removeClass('d-none');
-        $('.electrified-lg').removeClass('d-none');
-        $('.electrified-lg').addClass('animate__fadeIn');
-        $('.vehicles-nav-lg').addClass('d-none');
-
-
-
+        jumptoSection('.electrified-lg');
     })
 
     //back button vehicles
     $('.back-vehicle').click(function() {
-        $('#vehicles-section-lg').addClass('d-none');
-        $('.suv-lg').addClass('d-none');
-        $('.cars-lg').addClass('d-none');
-        $('.minivan-lg').addClass('d-none');
-        $('.electrified-lg').addClass('d-none')
-
-        $('.vehicles-nav-lg').removeClass('d-none');
+        diffirentClick('.vehicles-nav-lg', '.electrified-lg', '.minivan-lg', '.cars-lg', '.suv-lg', '#vehicles-section-lg');
     });
 
     //slidetoggle build up for navbar sm
@@ -365,7 +309,7 @@ $(document).ready(function() {
 
         $('#navbar-sm li').each(function(i) {
             if (i == countVehicle) {
-                $(this).addClass('active');
+                addClass(this, 'active');
                 $('.carousel-indicators-sm-header-text span').html($(this).html());
             }
         })
@@ -379,7 +323,7 @@ $(document).ready(function() {
 
             $('#navbar-sm li').each(function(i) {
                 if (i == countVehicle) {
-                    $(this).addClass('active');
+                    addClass(this, 'active');
                     $('.carousel-indicators-sm-header-text span').html($(this).html());
                 }
             })
@@ -389,11 +333,11 @@ $(document).ready(function() {
     $('.plus').click(function() {
         open = !open
         if (open) {
-            $(this).removeClass('fa-plus');
-            $(this).addClass('fa-minus');
+            removeClass(this, 'fa-plus')
+            addClass(this, 'fa-minus');
         } else {
-            $(this).addClass('fa-plus');
-            $(this).removeClass('fa-minus');
+            addClass(this, 'fa-plus');
+            removeClass(this, 'fa-minus');
         }
     })
 
