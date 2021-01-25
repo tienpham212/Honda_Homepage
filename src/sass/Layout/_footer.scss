@@ -66,12 +66,15 @@
     .footer-top-xs {
         .links {
             ul {
+                .first {
+                    border-top-color: transparent;
+                }
                 li {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     padding: $pd-2 $pd-2 $pd-2 $pd-5;
-                    border-bottom: $border-2;
+                    border-top: $border-2;
                     h3 {
                         @include text($font-size-1, $font-weight-bold, $color-dark-blue-1);
                     }
@@ -84,10 +87,18 @@
                         border-radius: 50%;
                         line-height: 18px;
                         text-align: center;
+                        cursor: pointer;
                     }
                 }
-                li:last-child {
-                    border-color: transparent;
+                ul.footer-vehicles-list-xs {
+                    border-bottom: $border-2;
+                    padding: 0 $pd-3 $pd-2;
+                    li {
+                        border-color: transparent;
+                        a {
+                            color: $color-dark-blue-1;
+                        }
+                    }
                 }
             }
         }

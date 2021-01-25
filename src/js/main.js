@@ -371,19 +371,32 @@ $(document).ready(function() {
         })
     })
     $('.carousel-control-next').click(function() {
-        if (countVehicle == 4) {
-            countVehicle = 0
-        } else {
-            countVehicle++;
-        }
-
-        $('#navbar-sm li').each(function(i) {
-            if (i == countVehicle) {
-                $(this).addClass('active');
-                $('.carousel-indicators-sm-header-text span').html($(this).html());
+            if (countVehicle == 4) {
+                countVehicle = 0
+            } else {
+                countVehicle++;
             }
+
+            $('#navbar-sm li').each(function(i) {
+                if (i == countVehicle) {
+                    $(this).addClass('active');
+                    $('.carousel-indicators-sm-header-text span').html($(this).html());
+                }
+            })
         })
+        //change plus to minus
+    var open = false;
+    $('.plus').click(function() {
+        open = !open
+        if (open) {
+            $(this).removeClass('fa-plus');
+            $(this).addClass('fa-minus');
+        } else {
+            $(this).addClass('fa-plus');
+            $(this).removeClass('fa-minus');
+        }
     })
+
 
 
 

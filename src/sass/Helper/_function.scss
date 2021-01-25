@@ -52,8 +52,9 @@
     @each $id in (1, 2, 3, 4) {
         .slide-header-#{$id} {
             background-image: url(../img/banner-#{$id}-xs.jpg);
-            background-position: center 57px;
+            background-position: center 48px;
             background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 }
