@@ -19,3 +19,6 @@ body {
 .overflow {
     overflow-y: hidden;
 }
+button:focus {
+    outline: none !important
+}; 

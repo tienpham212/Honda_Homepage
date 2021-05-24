@@ -4,6 +4,7 @@
     border-radius: 40px;
     font-weight: 500;
     cursor: pointer;
+    outline: none
 }
 
 .btn-orange {
@@ -11,6 +12,7 @@
     border-radius: 40px;
     font-weight: $font-weight-bold;
     cursor: pointer;
+    outline: none
 }
 
 .btn-white {
@@ -19,6 +21,7 @@
     font-weight: $font-weight-bold;
     border-radius: 40px;
     cursor: pointer;
+    outline: none
 }
 
 .btn-orange-white {
@@ -27,6 +30,7 @@
     font-weight: $font-weight-bold;
     border-radius: 40px;
     cursor: pointer;
+    outline: none
 }
 
 .btn-go {
@@ -35,6 +39,7 @@
     font-weight: $font-weight-bold;
     border-radius: 40px;
     cursor: pointer;
+    outline: none
 }
 
 .play-button {
@@ -46,6 +51,7 @@
     border-radius: 50%;
     text-align: center;
     line-height: 58px;
+    outline: none
     i {
         transform: translateX(3px);
     }
